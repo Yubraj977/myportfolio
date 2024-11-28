@@ -2,100 +2,162 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.js
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <div className="w-full bg-black text-white border p-4">
+      <div align="center">
+        <h1>Hi 🙋‍♂️, Hello 👋, Namaste 🙏</h1>
+        <h2>
+          I am <a href="https://yubrajkhatri.com.np">Yubraj Khatri</a>
+        </h2>
+        <h3>20-year-old Self-taught Full-Stack Developer from Nepal</h3>
+      </div>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
+      <div align="center" className="mt-6">
+        <table>
+          <tbody>
+            <tr>
+              <td>
+                <img
+                  src="https://github-readme-stats.vercel.app/api?username=Yubraj977&hide=stars&show_icons=true&theme=dark&line_height=32"
+                  alt="Yubraj's GitHub Stats"
+                />
+              </td>
+              <td>
+                <img
+                  src="https://github-readme-stats.vercel.app/api/top-langs/?username=Yubraj977&count_private=true&theme=dark"
+                  alt="Yubraj's Most Used Languages"
+                />
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div align="center" className="mt-10">
+        <div className="flex flex-wrap justify-center gap-4">
+          <img
+            height="60"
+            src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/html/html.png"
+            alt="HTML"
+          />
+          <img
+            height="60"
+            src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/css/css.png"
+            alt="CSS"
+          />
+          <img
+            height="70"
+            src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/bootstrap/bootstrap.png"
+            alt="Bootstrap"
+          />
+          <img
+            height="60"
+            src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/nodejs/nodejs.png"
+            alt="Node.js"
+          />
+          <img
+            height="60"
+            src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/mongodb/mongodb.png"
+            alt="MongoDB"
+          />
+          <img
+            height="60"
+            src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/mysql/mysql.png"
+            alt="MySQL"
+          />
+          <img
+            height="60"
+            src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/git/git.png"
+            alt="Git"
+          />
+          <img
+            height="60"
+            src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/terminal/terminal.png"
+            alt="Terminal"
+          />
+        </div>
+      </div>
+
+      <div align="center" className="mt-8">
+        <h3>Connect with me:</h3>
+        <div className="flex flex-wrap justify-center gap-4 mt-2">
           <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+            href="https://www.linkedin.com/in/yourprofile"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
+            <img
+              src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat&logo=linkedin&logoColor=white"
+              alt="LinkedIn"
             />
-            Deploy now
           </a>
           <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+            href="https://github.com/yourusername"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Read our docs
+            <img
+              src="https://img.shields.io/badge/GitHub-171515?style=flat&logo=github&logoColor=white"
+              alt="GitHub"
+            />
+          </a>
+          <a
+            href="https://twitter.com/yourusername"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="https://img.shields.io/badge/Twitter-1DA1F2?style=flat&logo=twitter&logoColor=white"
+              alt="Twitter"
+            />
+          </a>
+          <a
+            href="https://instagram.com/yourusername"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="https://img.shields.io/badge/Instagram-E4405F?style=flat&logo=instagram&logoColor=white"
+              alt="Instagram"
+            />
+          </a>
+          <a
+            href="https://yubrajkhatri.com.np"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="https://img.shields.io/badge/Portfolio-FF5722?style=flat&logo=google-chrome&logoColor=white"
+              alt="Portfolio"
+            />
           </a>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </div>
+
+      <div className="mt-10 text-center">
+        <h4>💬 Languages:</h4>
+        <pre className="text-sm text-left mx-auto max-w-lg">
+          {`
+English                      ████████████░░░░░░░░░░░░░   60.45%
+Hindi                        ████████████████████░░░░░   80.45%
+Nepali                       █████████████████████████   99.99%
+JavaScript                   █████████████████████████   100%
+Java                         █████████████████████████   100%
+`}
+        </pre>
+
+        <h4>💻 Operating Systems:</h4>
+        <pre className="text-sm text-left mx-auto max-w-lg">
+          {`
+Windows                      █████████████████████████   100.0%
+Mac                          █████████████████████░░░░   85%
+Linux                        ████████████████████░░░░░   80%
+`}
+        </pre>
+      </div>
+
+      <div align="center" className="mt-8">
+        <h3>Thank You 🙏🏼</h3>
+      </div>
     </div>
   );
 }

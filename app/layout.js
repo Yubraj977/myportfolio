@@ -1,6 +1,7 @@
 import localFont from "next/font/local";
 import "./globals.css";
-
+import Nav from "./components/Nav";
+import Rightpannel from "./components/Rightpannel";
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
@@ -23,7 +24,19 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        
+        <div className="flex h-screen w-full pt-16  ">
+          <div className="overflow-hidden w-[30%]">
+            <Nav />
+          </div>
+          <div className="flex-1 overflow-y-scroll  w-3/4 no-scrollbar">
+            {children}
+          </div>
+
+          <div className=" overflow-hidden w-1/4">
+            <Rightpannel />
+          </div>
+        </div>
       </body>
     </html>
   );
