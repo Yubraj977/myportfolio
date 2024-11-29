@@ -190,107 +190,107 @@ const cards = [
   {
     description: "Resturant Website of the naigra falls",
     title: "Taste of Nepal",
-    src: "https://assets.aceternity.com/demos/lana-del-rey.jpeg",
-    ctaText: "Play",
-    ctaLink: "https://ui.aceternity.com/templates",
+    src: "/tasteofnepal.png",
+    ctaText: "View",
+    ctaLink: "https://www.tastesofnepal.com/",
     content: () => {
       return (
-        (<p>Lana Del Rey, an iconic American singer-songwriter, is celebrated for
-                    her melancholic and cinematic music style. Born Elizabeth Woolridge
-                    Grant in New York City, she has captivated audiences worldwide with
-                    her haunting voice and introspective lyrics. <br /> <br />Her songs
-                    often explore themes of tragic romance, glamour, and melancholia,
-                    drawing inspiration from both contemporary and vintage pop culture.
-                    With a career that has seen numerous critically acclaimed albums, Lana
-                    Del Rey has established herself as a unique and influential figure in
-                    the music industry, earning a dedicated fan base and numerous
-                    accolades.
+        (<p>
+          Taste for Nepal is a modern website I developed using <span className="fong-bold text-green-500"> Next.js, React, and Tailwind CSS</span> to represent 
+          a Nepalese restaurant located near Niagara. This project showcases a seamless blend of traditional Nepali 
+          culture with contemporary web design, creating an immersive experience for visitors. The site highlights the restaurant’s unique
+           offerings, including authentic Nepalese cuisine and a welcoming ambiance that reflects the spirit of Nepal. By leveraging Next.js 
+           for <span className="fong-bold text-green-500"> server-side rendering and optimized performance, React for dynamic components, and Tailwind CSS for a sleek, responsive design, </span>
+           the website ensures a delightful and engaging browsing experience. This project demonstrates my ability to use advanced web development
+            tools to create visually appealing, functional, and culturally rich websites.
                   </p>)
       );
     },
   },
   {
-    description: "Babbu Maan",
-    title: "Mitran Di Chhatri",
-    src: "https://assets.aceternity.com/demos/babbu-maan.jpeg",
-    ctaText: "Play",
-    ctaLink: "https://ui.aceternity.com/templates",
+    description: "Himal Academy Dang school from Nepal",
+    title: "Himal Academy (High School)",
+    src: "/himalacademy.png",
+    ctaText: "View",
+    ctaLink: "https://www.himalacademy.com/",
     content: () => {
       return (
-        (<p>Babu Maan, a legendary Punjabi singer, is renowned for his soulful
-                    voice and profound lyrics that resonate deeply with his audience. Born
-                    in the village of Khant Maanpur in Punjab, India, he has become a
-                    cultural icon in the Punjabi music industry. <br /> <br />His songs
-                    often reflect the struggles and triumphs of everyday life, capturing
-                    the essence of Punjabi culture and traditions. With a career spanning
-                    over two decades, Babu Maan has released numerous hit albums and
-                    singles that have garnered him a massive fan following both in India
-                    and abroad.
+        (<p>
+         Himal Academy is an educational website I developed using<span className="fong-bold text-green-500"> React, React Router,
+          and Tailwind CSS</span>  to deliver a clean, intuitive, and responsive design.
+           The website serves as a platform to showcase the academy’s offerings, emphasizing accessibility and
+            seamless navigation. With React Router, I implemented smooth and<span className="fong-bold text-green-500"> dynamic routing </span>, allowing users to easily explore various
+             sections of the site. The use of Tailwind CSS ensured a <span className="fong-bold text-green-500">modern, consistent, and mobile-friendly interface,</span> catering to users on any device.
+              This project highlights my proficiency in building interactive, user-centric websites while maintaining a focus on performance and responsiveness.
                   </p>)
       );
     },
   },
 
   {
-    description: "Metallica",
-    title: "For Whom The Bell Tolls",
-    src: "https://assets.aceternity.com/demos/metallica.jpeg",
-    ctaText: "Play",
-    ctaLink: "https://ui.aceternity.com/templates",
+    description: "Ecommerce Website ",
+    title: "VedicHoneyProducts",
+    src: "/vedichoney.png",
+    ctaText: "view",
+    ctaLink: "https://vedichoneyproduct.com/",
     content: () => {
       return (
-        (<p>Metallica, an iconic American heavy metal band, is renowned for their
-                    powerful sound and intense performances that resonate deeply with
-                    their audience. Formed in Los Angeles, California, they have become a
-                    cultural icon in the heavy metal music industry. <br /> <br />Their
-                    songs often reflect themes of aggression, social issues, and personal
-                    struggles, capturing the essence of the heavy metal genre. With a
-                    career spanning over four decades, Metallica has released numerous hit
-                    albums and singles that have garnered them a massive fan following
-                    both in the United States and abroad.
-                  </p>)
+        (
+          <p>
+          Vedic Honey Products is an online e-commerce website I developed using
+          <span className="font-bold text-green-500">React, Redux, React Router, Tailwind CSS,</span> and several other advanced technologies. The platform manages
+          <span className="font-bold text-green-500">three types of users</span> with dedicated dashboards, ensuring tailored functionality for each user group.
+          With <span className="font-bold text-green-500">Redux</span>, I implemented robust state management, while
+          <span className="font-bold text-green-500">session and cookies</span> are seamlessly handled using
+          <span className="font-bold text-green-500">JWT</span> for secure and smooth login experiences.
+          Navigation is powered by <span className="font-bold text-green-500">React Router</span>, allowing users to explore the site effortlessly. To visualize data,
+          I integrated <span className="font-bold text-green-500">Chart.js</span>, providing insightful and interactive analytics within the dashboards.
+          The use of <span className="font-bold text-green-500">Tailwind CSS</span> ensures a modern, responsive design that adapts seamlessly to any device.
+          This project demonstrates my ability to build feature-rich, scalable, and user-centric web applications with a focus on performance and usability.
+        </p>
+                  )
       );
     },
   },
-  {
-    description: "Led Zeppelin",
-    title: "Stairway To Heaven",
-    src: "https://assets.aceternity.com/demos/led-zeppelin.jpeg",
-    ctaText: "Play",
-    ctaLink: "https://ui.aceternity.com/templates",
-    content: () => {
-      return (
-        (<p>Led Zeppelin, a legendary British rock band, is renowned for their
-                    innovative sound and profound impact on the music industry. Formed in
-                    London in 1968, they have become a cultural icon in the rock music
-                    world. <br /> <br />Their songs often reflect a blend of blues, hard
-                    rock, and folk music, capturing the essence of the 1970s rock era.
-                    With a career spanning over a decade, Led Zeppelin has released
-                    numerous hit albums and singles that have garnered them a massive fan
-                    following both in the United Kingdom and abroad.
-                  </p>)
-      );
-    },
-  },
-  {
-    description: "Mustafa Zahid",
-    title: "Toh Phir Aao",
-    src: "https://assets.aceternity.com/demos/toh-phir-aao.jpeg",
-    ctaText: "Play",
-    ctaLink: "https://ui.aceternity.com/templates",
-    content: () => {
-      return (
-        (<p> , a Bollywood movie starring Emraan Hashmi, is
-                    renowned for its intense storyline and powerful performances. Directed
-                    by Mohit Suri, the film has become a significant work in the Indian
-                    film industry. <br /> <br />The movie explores themes of love,
-                    redemption, and sacrifice, capturing the essence of human emotions and
-                    relationships. With a gripping narrative and memorable music,
-                    has garnered a massive fan following both in
-                    India and abroad, solidifying Emraan  status as a
-                    versatile actor.
-                  </p>)
-      );
-    },
-  },
+  // {
+  //   description: "Led Zeppelin",
+  //   title: "Stairway To Heaven",
+  //   src: "https://assets.aceternity.com/demos/led-zeppelin.jpeg",
+  //   ctaText: "Play",
+  //   ctaLink: "https://ui.aceternity.com/templates",
+  //   content: () => {
+  //     return (
+  //       (<p>Led Zeppelin, a legendary British rock band, is renowned for their
+  //                   innovative sound and profound impact on the music industry. Formed in
+  //                   London in 1968, they have become a cultural icon in the rock music
+  //                   world. <br /> <br />Their songs often reflect a blend of blues, hard
+  //                   rock, and folk music, capturing the essence of the 1970s rock era.
+  //                   With a career spanning over a decade, Led Zeppelin has released
+  //                   numerous hit albums and singles that have garnered them a massive fan
+  //                   following both in the United Kingdom and abroad.
+  //                 </p>)
+  //     );
+  //   },
+  // },
+  // {
+  //   description: "Mustafa Zahid",
+  //   title: "Toh Phir Aao",
+  //   src: "https://assets.aceternity.com/demos/toh-phir-aao.jpeg",
+  //   ctaText: "Play",
+  //   ctaLink: "https://ui.aceternity.com/templates",
+  //   content: () => {
+  //     return (
+  //       (<p> , a Bollywood movie starring Emraan Hashmi, is
+  //                   renowned for its intense storyline and powerful performances. Directed
+  //                   by Mohit Suri, the film has become a significant work in the Indian
+  //                   film industry. <br /> <br />The movie explores themes of love,
+  //                   redemption, and sacrifice, capturing the essence of human emotions and
+  //                   relationships. With a gripping narrative and memorable music,
+  //                   has garnered a massive fan following both in
+  //                   India and abroad, solidifying Emraan  status as a
+  //                   versatile actor.
+  //                 </p>)
+  //     );
+  //   },
+  // },
 ];
