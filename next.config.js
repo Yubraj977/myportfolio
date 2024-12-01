@@ -8,6 +8,7 @@ const nextConfig = {
           hostname: 'assets.aceternity.com',
         },
       ],
+      domains:["api.microlink.io","images.unsplash.com","res.cloudinary.com","www.youtube.com","encrypted-tbn0.gstatic.com"]
     },
   };
   

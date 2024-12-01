@@ -252,6 +252,28 @@ const cards = [
       );
     },
   },
+  {
+    description: "Movie Website ",
+    title: "YmsHub",
+    src: "/ymshub.png",
+    ctaText: "view",
+    ctaLink: "https://www.ymshub.xyz/",
+    content: () => {
+      return (
+        (
+          <p>
+          YMSHub.xyz is a free online movie streaming platform that I developed, showcasing my skills in building dynamic and feature-rich web applications. The website is powered by 
+          <span className="font-bold text-blue-500">Next.js, TMDB API, Tailwind CSS,</span> and other modern technologies. 
+          Using the <span className="font-bold text-blue-500">TMDB API</span>, I implemented a robust data-fetching mechanism to display a wide range of movies with details such as posters, genres, and ratings. 
+          Navigation is optimized through <span className="font-bold text-blue-500">React Router</span>, ensuring seamless exploration across various pages.
+          The platforms user interface is crafted with <span className="font-bold text-blue-500">Tailwind CSS,</span> ensuring a responsive design that provides an excellent experience on both desktop and mobile devices.
+          By utilizing the <span className="font-bold text-blue-500">server-side rendering</span> capabilities of Next.js, the application delivers faster load times and enhanced SEO performance. 
+          This project highlights my expertise in API integration, responsive design, and creating user-friendly platforms, making it a hub for effortless movie exploration.
+        </p>
+                  )
+      );
+    },
+  },
   // {
   //   description: "Led Zeppelin",
   //   title: "Stairway To Heaven",
