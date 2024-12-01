@@ -31,10 +31,10 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <div className="flex lg:h-screen w-full pt-16 flex-col lg:flex-row ">
-          <div className="overflow-hidden w-[30%]">
+          <div className="overflow-hidden w-[30%] z-50">
             <Nav />
           </div>
-          <div className="flex-1 overflow-y-scroll border   w-3/4 no-scrollbar h-full">
+          <div className="flex-1 overflow-y-scroll border -overflow-y-scroll  w-3/4 no-scrollbar h-full z-0">
             {children}
           </div>
 

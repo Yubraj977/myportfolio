@@ -14,7 +14,7 @@ import { LinkPreviewDemoSecond } from "./ui/LinkPreviewDemo";
 
 const Nav = () => {
   return (
-    <div className=" -r-[0.5px]  w-full  00 flex flex-col pl-52  overflow-hidden  ">
+    <div className=" -r-[0.5px]  w-full  00 flex flex-col pl-52  overflow-hidden z-50 ">
       {/* The Profile Section which should be movabl */}
       <div className=" h-full  flex flex-col  items-center  justify-center     px-4 ">
         <div className=" rounded-full flex justify-center items-center border-2  border-slate-900">
