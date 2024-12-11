@@ -63,7 +63,7 @@ export function ExpandableCardDemo() {
           <motion.div
             layoutId={`card-${active.title}-${id}`}
             ref={ref}
-            className="w-full max-w-[500px]  h-full md:h-fit md:max-h-[90%]  flex flex-col bg-neutral-900 sm:rounded-3xl overflow-hidden">
+            className="w-full md:max-w-[500px]  h-full md:h-fit md:max-h-[90%]  flex flex-col bg-neutral-900 sm:rounded-3xl overflow-hidden">
             <motion.div layoutId={`image-${active.title}-${id}`}>
               <Image
                 priority
@@ -114,14 +114,14 @@ export function ExpandableCardDemo() {
         </div>
       ) : null}
     </AnimatePresence>
-    <ul className="max-w-2xl mx-auto w-full gap-4">
+    <ul className="max-w-2xl mx-auto w-full gap-4 ">
       {cards.map((card, index) => (
         <motion.div
           layoutId={`card-${card.title}-${id}`}
           key={`card-${card.title}-${id}`}
           onClick={() => setActive(card)}
-          className="p-4 flex flex-col md:flex-row justify-between items-center hover:bg-neutral-800 rounded-xl cursor-pointer">
-          <div className="flex gap-4 flex-col md:flex-row ">
+          className="p-4 flex  md:flex-row justify-between items-center hover:bg-neutral-800 rounded-xl cursor-pointer relative  lg:bg-transparent bg-[#e8edf0] border-pink-600 mt-6 lg:mt-0 md:mt-0">
+          <div className="flex lg:gap-4  md:flex-row  w-full  border-green-500 gap-4">
             <motion.div layoutId={`image-${card.title}-${id}`}>
               <Image
                 width={100}
@@ -130,22 +130,32 @@ export function ExpandableCardDemo() {
                 alt={card.title}
                 className="h-40 w-40 md:h-14 md:w-14 rounded-lg object-cover object-top" />
             </motion.div>
-            <div className="">
+
+            <div className=" flex flex-col justify-between">
+              <div>
               <motion.h3
                 layoutId={`title-${card.title}-${id}`}
-                className="font-medium text-neutral-200 text-center md:text-left">
+                className="lg:ont-medium text-black  font-bold lg:text-neutral-200 text-center md:text-left">
                 {card.title}
               </motion.h3>
               <motion.p
                 layoutId={`description-${card.description}-${id}`}
-                className="text-neutral-400 text-center md:text-left">
+                className=" text-slate-900 text-sm lg:text-md lg:text-neutral-400 text-center md:text-left">
                 {card.description}
               </motion.p>
+              </div>
+              <motion.button
+            layoutId={`button-${card.title}-${id}`}
+            className="px-4 py-2 lg:hidden text-sm rounded-full font-bold  md:block  right-10 bottom bg-[#1f6764]   text-white mt-4 md:mt-0">
+            {card.ctaText}
+          </motion.button>
             </div>
+
+
           </div>
           <motion.button
             layoutId={`button-${card.title}-${id}`}
-            className="px-4 py-2 text-sm rounded-full font-bold bg-gray-100 hover:bg-green-500 hover:text-white text-black mt-4 md:mt-0">
+            className=" hidden px-4 py-2 text-sm rounded-full font-bold   md:block lg:block right-10 bottom bg-gray-100 hover:bg-green-500 hover:text-white text-black mt-4 md:mt-0">
             {card.ctaText}
           </motion.button>
         </motion.div>
@@ -188,7 +198,7 @@ export const CloseIcon = () => {
 
 const cards = [
   {
-    description: "Resturant Website of the naigra falls",
+    description: "Resturant site(Naigra Falls)",
     title: "Taste of Nepal",
     src: "/tasteofnepal.png",
     ctaText: "View",
@@ -208,8 +218,8 @@ const cards = [
     },
   },
   {
-    description: "Himal Academy Dang school from Nepal",
-    title: "Himal Academy (High School)",
+    description: "Hign School Website",
+    title: "Himal Academy ",
     src: "/himalacademy.png",
     ctaText: "View",
     ctaLink: "https://www.himalacademy.com/",

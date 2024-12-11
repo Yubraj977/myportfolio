@@ -30,15 +30,21 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <div className="flex lg:h-screen w-full pt-16 flex-col lg:flex-row ">
-          <div className="overflow-hidden w-[30%] z-50">
+        <div className="flex lg:h-screen w-full lg:pt-16 flex-col lg:flex-row ">
+          <div className="overflow-hidden lg:w-[30%] w-full  border-red-400 z-50">
             <Nav />
           </div>
-          <div className="flex-1 overflow-y-scroll border -overflow-y-scroll  w-3/4 no-scrollbar h-full z-0">
+
+          {/* Espically for the mobile device */}
+          <div className="lg:hidden md:hidden overflow-hidden w-full lg:w-1/4 mt-20">
+            <Rightpannel />
+          </div>
+
+          <div className="flex-1 overflow-y-scroll border -overflow-y-scroll  w-full lg:w-3/4 no-scrollbar h-full z-0 mt-10 lg:mt-0">
             {children}
           </div>
 
-          <div className=" overflow-hidden w-1/4">
+          <div className="hidden lg:block md:flex overflow-hidden w-full lg:w-1/4">
             <Rightpannel />
           </div>
         </div>
