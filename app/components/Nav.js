@@ -28,7 +28,7 @@ const Nav = () => {
           />
         </div>
 
-        <div className="mt-4 flex flex-col">
+        <div className="mt-4 flex flex-col ">
           <h1 className="font-bold text-3xl ">Yubraj Khatri</h1>
           <p className="opacity-45"> Yubraj977</p>
           <LinkPreviewDemoSecond />

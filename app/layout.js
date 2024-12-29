@@ -38,9 +38,10 @@ export default function RootLayout({ children }) {
           {/* Espically for the mobile device */}
           <div className="lg:hidden md:hidden overflow-hidden w-full lg:w-1/4 mt-20">
             <Rightpannel />
+            
           </div>
 
-          <div className="flex-1 overflow-y-scroll border -overflow-y-scroll  w-full lg:w-3/4 no-scrollbar h-full z-0 mt-10 lg:mt-0">
+          <div className="flex-1 overflow-y-scroll  -overflow-y-scroll  w-full lg:w-3/4 no-scrollbar h-full z-0 mt-10 lg:mt-0">
             {children}
           </div>
 
