@@ -75,7 +75,7 @@ export function ExpandableCardDemo() {
             </motion.div>
 
             <div>
-              <div className="flex justify-between items-start p-4">
+              <div className="flex justify-between items-start p-4 border-neutral-500">
                 <div className="">
                   <motion.h3
                     layoutId={`title-${active.title}-${id}`}
@@ -114,13 +114,14 @@ export function ExpandableCardDemo() {
         </div>
       ) : null}
     </AnimatePresence>
-    <ul className="max-w-2xl mx-auto w-full gap-4 ">
+    <ul className="max-w-2xl mx-auto w-full gap-4  mt-4">
       {cards.map((card, index) => (
+        //This is the each box of the project section 
         <motion.div
           layoutId={`card-${card.title}-${id}`}
           key={`card-${card.title}-${id}`}
           onClick={() => setActive(card)}
-          className="p-4 flex  md:flex-row justify-between items-center hover:bg-neutral-800 rounded-xl cursor-pointer relative  lg:bg-transparent bg-[#e8edf0] border-pink-600 mt-6 lg:mt-0 md:mt-0">
+          className="p-4 flex  md:flex-row justify-between items-center  hover:bg-neutral-800   rounded-xl cursor-pointer relative   lg:bg-neutral-900  bg-[#232225]  my-4 lg:mt-0 md:mt-0">
           <div className="flex lg:gap-4  md:flex-row  w-full  border-green-500 gap-4">
             <motion.div layoutId={`image-${card.title}-${id}`}>
               <Image
@@ -135,12 +136,12 @@ export function ExpandableCardDemo() {
               <div>
               <motion.h3
                 layoutId={`title-${card.title}-${id}`}
-                className="lg:ont-medium text-black  font-bold lg:text-neutral-200 text-center md:text-left">
+                className="lg:ont-medium text-white  font-bold lg:text-neutral-200 text-center md:text-left">
                 {card.title}
               </motion.h3>
               <motion.p
                 layoutId={`description-${card.description}-${id}`}
-                className=" text-slate-900 text-sm lg:text-md lg:text-neutral-400 text-center md:text-left">
+                className=" text-white text-sm lg:text-md lg:text-neutral-400 text-center md:text-left">
                 {card.description}
               </motion.p>
               </div>

@@ -1,4 +1,4 @@
-"use client";
+
 import React from "react";
 import Image from "next/image";
 import { ImagesSliderDemo } from "./ui/ImagesSliderDemo";
@@ -11,6 +11,7 @@ import { GiJumpingDog } from "react-icons/gi";
 import { GlobeDemo } from "./ui/GlobeDemo";
 import { LampDemo } from "./Ancertenity/lamp";
 import { LinkPreviewDemoSecond } from "./ui/LinkPreviewDemo";
+import Home from "./3D/Home";
 
 const Nav = () => {
   return (
@@ -18,6 +19,11 @@ const Nav = () => {
       {/* The Profile Section which should be movabl */}
       <div className=" h-full  flex flex-col  items-center  justify-center     px-4 ">
         <div className=" rounded-full flex justify-center items-center border-2  border-slate-900">
+       
+{/* <div className="h-60 w-60 justify-center items-center flex object-cover rounded-full object-center">
+
+<Home/>
+</div> */}
           
           <Image
             src="/cyberhead.png"
