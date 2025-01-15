@@ -41,7 +41,7 @@ export default function RootLayout({ children }) {
             
           </div>
 
-          <div className="flex-1 overflow-y-scroll  -overflow-y-scroll  w-full lg:w-3/4 no-scrollbar h-full z-0 mt-10 lg:mt-0">
+          <div className="flex-1 overflow-y-scroll  -overflow-y-scroll  w-full lg:w-3/4 no-scrollbar h-full z-0 mt-10 lg:mt-0 ">
             {children}
           </div>
 

@@ -12,6 +12,7 @@ import { GlobeDemo } from "./ui/GlobeDemo";
 import { LampDemo } from "./Ancertenity/lamp";
 import { LinkPreviewDemoSecond } from "./ui/LinkPreviewDemo";
 import Home from "./3D/Home";
+import Link from "next/link";
 
 const Nav = () => {
   return (
@@ -35,8 +36,10 @@ const Nav = () => {
         </div>
 
         <div className="mt-4 flex flex-col ">
+          <Link href="/"> 
           <h1 className="font-bold text-3xl ">Yubraj Khatri</h1>
           <p className="opacity-45"> Yubraj977</p>
+          </Link>
           <LinkPreviewDemoSecond />
         </div>
 

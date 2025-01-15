@@ -1,9 +1,12 @@
 import React from 'react';
 import Home from './components/3D/Home';
+import Resume from './components/quick/Resume';
+import Blog from './components/quick/Blog';
 const MyComponent = () => {
   return (
-    <div className='border-2 border-red-100 w-full h-screen'>
-    
+    <div className=' w-full h-screen'>
+     
+    <Blog />
      
     </div>
   );
