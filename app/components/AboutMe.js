@@ -31,7 +31,7 @@ const AboutMe = () => {
         <div className="text-yellow-800 leading-relaxed font-serif">
           <p className="mb-6 indent-12">
             With a foundation in <span className="font-bold">Web Development</span>, <span className="font-bold">App Creation</span>, 
-            and <span className="font-bold">Video Editing</span>, I thrive on merging creativity with logic. Whether it's crafting elegant solutions for complex problems 
+            and <span className="font-bold">Video Editing</span>, I thrive on merging creativity with logic. Whether its crafting elegant solutions for complex problems 
             or weaving stories through cinematic visuals, my work is an homage to the harmony of art and science.
           </p>
 
