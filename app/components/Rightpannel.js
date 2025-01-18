@@ -4,7 +4,7 @@ import { ExpandableCardDemo } from './Ancertenity/ExpandableCard'
 import { ExpandableCardDemo1 } from './Ancertenity/ExpandableCard1';
 const Rightpannel = () => {
   return (
-    <div className=' w-full  overflow-hidden px-4 max-w-screen-lg  border-yellow-400 h-screen'>
+    <div className=' w-full  overflow-hidden px-4 lg:max-w-screen-lg  border-yellow-400 lg:h-screen'>
       <h1 className='font-bold  text-xl text-center lg:border md:border border-2 bg-neutral-100 dark:bg-neutral-500'> MY PROJECTS</h1>
       <ExpandableCardDemo/>
      

@@ -30,26 +30,33 @@ export default function RootLayout({ children }) {
         <meta name="description" content={metadata.description} />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased max-h-screen`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Providers>
-        <div className="flex lg:h-screen h-screen w-full flex-col lg:flex-row">
-          {/* Left Sidebar (Nav) */}
-          <div className="overflow-hidden lg:w-[30%] w-full lg:h-screen h-auto">
+        <Providers className="">
+          
+        <div className="flex lg:h-screen w-full lg:pt-16 flex-col border border-red-500 lg:flex-row  ">
+         
+          <div className="overflow-hidden lg:w-[30%] w-full z-50">
             <Nav />
           </div>
 
-          {/* Main Content Area */}
-          <div className="flex-1 overflow-y-scroll no-scrollbar lg:h-screen h-auto">
+          {/* Espically for the mobile device */}
+          <div className="lg:hidden md:hidden overflow-hidden w-full lg:w-1/4 mt-20">
+            <Rightpannel />
+            
+          </div>
+
+          <div className="flex-1 overflow-y-scroll  -overflow-y-scroll  w-full lg:w-3/4 no-scrollbar h-full z-0 lg:mt-10  mt-0 ">
+          
+
             {children}
           </div>
 
-          {/* Right Sidebar (Rightpannel) */}
-          <div className="hidden lg:block overflow-hidden lg:w-[25%] lg:h-screen">
+          <div className="hidden lg:block md:flex overflow-hidden w-full  lg:w-1/4">
             <Rightpannel />
           </div>
         </div>
-        </Providers>
+       </Providers>
       </body>
     </html>
   );
