@@ -56,7 +56,7 @@ export function ExpandableCardDemo1() {
                 duration: 0.05,
               },
             }}
-            className="flex absolute top-2 right-2 lg:hidden items-center justify-center bg-white rounded-full h-6 w-6"
+            className="flex absolute top-2 right-2 lg:hidden items-center justify-centerv  bg-white rounded-full h-6 w-6"
             onClick={() => setActive(null)}>
             <CloseIcon />
           </motion.button>
@@ -75,16 +75,16 @@ export function ExpandableCardDemo1() {
             </motion.div>
 
             <div>
-              <div className="flex justify-between items-start p-4 border-neutral-500">
+              <div className="flex justify-between items-start p-4  border-red-600 bg-white dark:bg-[#232225]  ">
                 <div className="">
-                  {/* <motion.h3
+                  <motion.h3
                     layoutId={`title-${active.title}-${id}`}
-                    className="font-bold  text-neutral-200">
+                    className="font-bold text-neutral-900  dark:text-neutral-200">
                     {active.title}
-                  </motion.h3> */}
+                  </motion.h3>
                   <motion.p
                     layoutId={`description-${active.description}-${id}`}
-                    className="text-neutral-400">
+                    className="text-neutral-900 dark:text-neutral-400">
                     {active.description}
                   </motion.p>
                 </div>
@@ -93,17 +93,19 @@ export function ExpandableCardDemo1() {
                   layoutId={`button-${active.title}-${id}`}
                   href={active.ctaLink}
                   target="_blank"
-                  className="px-4 py-3 text-sm rounded-full font-bold bg-green-500 text-white">
+                  className="px-4 py-3 text-sm rounded-full font-bold  bg-green-500 text-white">
                   {active.ctaText}
                 </motion.a>
               </div>
-              <div className="pt-4 relative px-4">
+              <div className="pt-4 relative px-4 bg-neutral-100 dark:bg-neutral-900">
                 <motion.div
                   layout
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
-                  className=" text-sm md:text-sm lg:text-base h-40 md:h-fit pb-10 flex flex-col items-start gap-4 overflow-auto text-neutral-400 [mask:linear-gradient(to_bottom,white,white,transparent)] [scrollbar-width:none] [-ms-overflow-style:none] [-webkit-overflow-scrolling:touch]">
+                  className=" text-sm md:text-sm lg:text-base h-40 md:h-fit pb-10 flex flex-col items-start gap-4 overflow-auto [mask:linear-gradient(to_bottom,white,white,transparent)] [scrollbar-width:none] [-ms-overflow-style:none] [-webkit-overflow-scrolling:touch]
+                  
+                  ">
                   {typeof active.content === "function"
                     ? active.content()
                     : active.content}
@@ -121,7 +123,7 @@ export function ExpandableCardDemo1() {
           layoutId={`card-${card.title}-${id}`}
           key={`card-${card.title}-${id}`}
           onClick={() => setActive(card)}
-          className="p-4 flex  md:flex-row justify-between items-center  hover:bg-neutral-800   rounded-xl cursor-pointer relative   lg:bg-neutral-900  bg-[#232225]  my-4 lg:mt-0 md:mt-0">
+          className="p-4  border-red-600  flex  md:flex-row justify-between items-center  dark:hover:bg-neutral-700   rounded-xl cursor-pointer relative  bg-slate-100 hover:bg-neutral-200  dark:bg-[#232225]  my-4 lg:mt-0 md:mt-0">
           <div className="flex lg:gap-4  md:flex-row  w-full  border-green-500 gap-4">
             <motion.div layoutId={`image-${card.title}-${id}`}>
               <Image
@@ -129,19 +131,19 @@ export function ExpandableCardDemo1() {
                 height={50}
                 src={card.src}
                 alt={card.title}
-                className="h-40 w-40 md:h-14 md:w-14 rounded-lg object-cover object-top" />
+                className="h-40 w-40 md:h-14 md:w-14 rounded-lg object-cover object-top " />
             </motion.div>
 
             <div className=" flex flex-col justify-between">
               <div>
               <motion.h3
                 layoutId={`title-${card.title}-${id}`}
-                className="lg:ont-medium text-white  font-bold lg:text-neutral-200 text-center md:text-left">
+                className="lg:ont-medium   font-bold text-neutral-900 dark:text-neutral-100 text-center md:text-left">
                 {card.title}
               </motion.h3>
               <motion.p
                 layoutId={`description-${card.description}-${id}`}
-                className=" text-white text-sm lg:text-sm lg:text-neutral-400 text-center md:text-left">
+                className=" text-neutral-900 dark:text-slate-100  text-sm lg:text-sm  text-center md:text-left">
                 {card.description}
               </motion.p>
               </div>

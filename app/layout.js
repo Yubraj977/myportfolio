@@ -3,6 +3,8 @@ import "./globals.css";
 import Nav from "./components/Nav";
 import Rightpannel from "./components/Rightpannel";
 import { LampDemo } from "./components/Ancertenity/lamp";
+import { ThemeChanger } from "./utils.js/toggleTheme";
+import Providers from "@/providers";
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
@@ -21,35 +23,33 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <head>
         <link rel="icon" href="/cyberhead.png" />
         <title>{metadata.title}</title>
         <meta name="description" content={metadata.description} />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased max-h-screen`}
       >
-        <div className="flex lg:h-screen w-full lg:pt-16 flex-col lg:flex-row ">
-          <div className="overflow-hidden lg:w-[30%] w-full  border-red-400 z-50">
+        <Providers>
+        <div className="flex lg:h-screen h-screen w-full flex-col lg:flex-row">
+          {/* Left Sidebar (Nav) */}
+          <div className="overflow-hidden lg:w-[30%] w-full lg:h-screen h-auto">
             <Nav />
           </div>
 
-          {/* Espically for the mobile device */}
-          <div className="lg:hidden md:hidden overflow-hidden w-full lg:w-1/4 mt-20">
-            <Rightpannel />
-            
-          </div>
-
-          <div className="flex-1 overflow-y-scroll  -overflow-y-scroll  w-full lg:w-3/4 no-scrollbar h-full z-0 mt-10 lg:mt-0 ">
+          {/* Main Content Area */}
+          <div className="flex-1 overflow-y-scroll no-scrollbar lg:h-screen h-auto">
             {children}
           </div>
 
-          <div className="hidden lg:block md:flex overflow-hidden w-full lg:w-1/4">
+          {/* Right Sidebar (Rightpannel) */}
+          <div className="hidden lg:block overflow-hidden lg:w-[25%] lg:h-screen">
             <Rightpannel />
           </div>
         </div>
-        {/* <LampDemo/> */}
+        </Providers>
       </body>
     </html>
   );

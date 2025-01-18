@@ -13,12 +13,14 @@ import { LampDemo } from "./Ancertenity/lamp";
 import { LinkPreviewDemoSecond } from "./ui/LinkPreviewDemo";
 import Home from "./3D/Home";
 import Link from "next/link";
+import { ThemeChanger } from "../utils.js/toggleTheme";
 
 const Nav = () => {
   return (
-    <div className=" -r-[0.5px]  w-full  00 flex flex-col lg:pl-52  overflow-hidden z-50 ">
+    <div className=" -r-[0.5px]  w-full  00 flex flex-col lg:pl-52  overflow-hidden z-50 max-h-screen">
       {/* The Profile Section which should be movabl */}
       <div className=" h-full  flex flex-col  items-center  justify-center     px-4 ">
+        
         <div className=" rounded-full flex justify-center items-center border-2  border-slate-900">
        
 {/* <div className="h-60 w-60 justify-center items-center flex object-cover rounded-full object-center">
@@ -33,13 +35,22 @@ const Nav = () => {
             alt="Picture of the author"
             className="h-60 w-60 object-cover rounded-full object-center scale-x-[-1] -rotate-[9deg]"
           />
+         
         </div>
+          
+       
 
         <div className="mt-4 flex flex-col ">
+          <div className="flex gap-6 ">
           <Link href="/"> 
           <h1 className="font-bold text-3xl ">Yubraj Khatri</h1>
+          </Link>
+          <ThemeChanger />
+          </div>
+          <Link href="/"> 
           <p className="opacity-45"> Yubraj977</p>
           </Link>
+          
           <LinkPreviewDemoSecond />
         </div>
 

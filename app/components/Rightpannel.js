@@ -4,14 +4,14 @@ import { ExpandableCardDemo } from './Ancertenity/ExpandableCard'
 import { ExpandableCardDemo1 } from './Ancertenity/ExpandableCard1';
 const Rightpannel = () => {
   return (
-    <div className=' w-full  overflow-hidden px-4'>
-      <h1 className='font-bold font-bold text-xl text-center lg:border md:border border-2 bg-neutral-500'> MY PROJECTS</h1>
+    <div className=' w-full  overflow-hidden px-4 max-w-screen-lg  border-yellow-400 h-screen'>
+      <h1 className='font-bold  text-xl text-center lg:border md:border border-2 bg-neutral-100 dark:bg-neutral-500'> MY PROJECTS</h1>
       <ExpandableCardDemo/>
      
       {/* <h1 className='font-bold font-bold text-xl text-center lg:border md:border border-2 bg-neutral-500'> Certfications and acedemic Flex</h1> */}
      <hr className='mt-12'/>
     
-    <div className="  p-2 min-h-screen">
+    <div className="  p-2 ">
 
     <section className="mb-8">
           <h2 className="text-center font-bold">Certificates</h2>
