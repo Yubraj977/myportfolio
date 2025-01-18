@@ -225,7 +225,7 @@ const cards = [
   {
     description: "Hign School Website",
     title: "Himal Academy ",
-    src: "/himalacademy.png",
+    src: "/himal.png",
     ctaText: "View",
     ctaLink: "https://www.himalacademy.com/",
     content: () => {
