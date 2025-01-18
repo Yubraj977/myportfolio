@@ -34,7 +34,7 @@ export default function RootLayout({ children }) {
       >
         <Providers className="">
           
-        <div className="flex lg:h-screen w-full lg:pt-16 flex-col border border-red-500 lg:flex-row  ">
+        <div className="flex lg:h-screen overflow-hidden w-full lg:pt-16 flex-col  border-red-500 lg:flex-row  ">
          
           <div className="overflow-hidden lg:w-[30%] w-full z-50">
             <Nav />
