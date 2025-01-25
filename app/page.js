@@ -8,6 +8,16 @@ const MyComponent = () => {
     <div className=' w-full h-screen'>
      <a href='https://blog.yubrajkhatri.com.np/' target='_blank'>
     <Blog />
+    <iframe
+      
+        src="https://gallery.yubrajkhatri.com.np/"
+        width="100%"
+        height="1000"
+        style={{
+          border: "none",
+        }}
+        title="Embedded Blog"
+      ></iframe>
     </a>
   
     </div>
