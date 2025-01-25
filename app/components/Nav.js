@@ -87,6 +87,16 @@ Linux    ████████████░░░░░ 80%
 `}
           </pre>
           <hr/>
+
+<a href="https://gallery.yubrajkhatri.com.np/">    <button className=" my-4 px-4 py-2 rounded-md font-medium text-gray-800 bg-gray-200 hover:bg-gray-300 dark:text-gray-200 dark:bg-gray-700 dark:hover:bg-gray-600 transition duration-200">
+      Watch My Gallery
+    </button>
+    </a>
+   
+      
+
+          <hr/>
+
         </div>
       </div>
     </div>
