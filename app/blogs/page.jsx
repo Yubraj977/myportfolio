@@ -27,7 +27,7 @@ export const metadata = {
   
     return (
       <div className="px-6 py-8 max-w-3xl mx-auto text-black dark:text-white">
-        <h1 className="text-3xl font-extrabold mb-6 text-center">📝 Yubraj's Blogs</h1>
+        <h1 className="text-3xl font-extrabold mb-6 text-center">📝 Yubraj Blogs</h1>
   
         <div className="space-y-6">
           {blogs.map((blog, idx) => (

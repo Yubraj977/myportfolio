@@ -1,14 +1,9 @@
-"use client";;
+"use client";
 import * as HoverCardPrimitive from "@radix-ui/react-hover-card";
 import Image from "next/image";
 import { encode } from "qss";
 import React from "react";
-import {
-  AnimatePresence,
-  motion,
-  useMotionValue,
-  useSpring,
-} from "framer-motion";
+import { AnimatePresence, motion, useMotionValue, useSpring } from "framer-motion";
 import Link from "next/link";
 import { cn } from "@/app/lib/utils";
 
@@ -19,9 +14,10 @@ export const LinkPreview = ({
   width = 200,
   height = 125,
   quality = 50,
+  // `layout` is deprecated in newer Next/Image; keep if your setup needs it
   layout = "fixed",
   isStatic = false,
-  imageSrc = ""
+  imageSrc = "",
 }) => {
   let src;
   if (!isStatic) {
@@ -42,7 +38,6 @@ export const LinkPreview = ({
   }
 
   const [isOpen, setOpen] = React.useState(false);
-
   const [isMounted, setIsMounted] = React.useState(false);
 
   React.useEffect(() => {
@@ -51,84 +46,90 @@ export const LinkPreview = ({
 
   const springConfig = { stiffness: 100, damping: 15 };
   const x = useMotionValue(0);
-
   const translateX = useSpring(x, springConfig);
 
   const handleMouseMove = (event) => {
-    const targetRect = event.target.getBoundingClientRect();
+    const targetRect = event.currentTarget.getBoundingClientRect();
     const eventOffsetX = event.clientX - targetRect.left;
-    const offsetFromCenter = (eventOffsetX - targetRect.width / 2) / 2; // Reduce the effect to make it subtle
+    const offsetFromCenter = (eventOffsetX - targetRect.width / 2) / 2;
     x.set(offsetFromCenter);
   };
 
-  return (<>
-    {isMounted ? (
-      <div className="hidden">
-        <Image
-          src={src}
-          width={width}
-          height={height}
-          quality={quality}
-          layout={layout}
-          priority={true}
-          alt="hidden image" />
-      </div>
-    ) : null}
-    <HoverCardPrimitive.Root
-      openDelay={50}
-      closeDelay={100}
-      onOpenChange={(open) => {
-        setOpen(open);
-      }}>
-      <HoverCardPrimitive.Trigger
-        onMouseMove={handleMouseMove}
-        className={cn("text-black dark:text-white", className)}
-        href={url}>
-        {children}
-      </HoverCardPrimitive.Trigger>
+  return (
+    <>
+      {isMounted ? (
+        // ✅ inline-safe preloader
+        <span className="hidden">
+          <Image
+            src={src}
+            width={width}
+            height={height}
+            quality={quality}
+            // if using Next 13+, consider removing `layout`
+            layout={layout}
+            priority
+            alt="hidden image"
+          />
+        </span>
+      ) : null}
 
-      <HoverCardPrimitive.Content
-        className="[transform-origin:var(--radix-hover-card-content-transform-origin)]"
-        side="top"
-        align="center"
-        sideOffset={10}>
-        <AnimatePresence>
-          {isOpen && (
-            <motion.div
-              initial={{ opacity: 0, y: 20, scale: 0.6 }}
-              animate={{
-                opacity: 1,
-                y: 0,
-                scale: 1,
-                transition: {
-                  type: "spring",
-                  stiffness: 260,
-                  damping: 20,
-                },
-              }}
-              exit={{ opacity: 0, y: 20, scale: 0.6 }}
-              className="shadow-xl rounded-xl"
-              style={{
-                x: translateX,
-              }}>
-              <Link
-                href={url}
-                className="block p-1 bg-white border-2 border-transparent shadow rounded-xl hover:border-neutral-200 dark:hover:border-neutral-800"
-                style={{ fontSize: 0 }}>
-                <Image
-                  src={isStatic ? imageSrc : src}
-                  width={width}
-                  height={height}
-                  quality={quality}
-                  layout={layout}
-                  priority={true}
-                  className="rounded-lg"
-                  alt="preview image" />
-              </Link>
-            </motion.div>
-          )}
-        </AnimatePresence>
-      </HoverCardPrimitive.Content>
-    </HoverCardPrimitive.Root>
-  </>);
+      <HoverCardPrimitive.Root
+        openDelay={50}
+        closeDelay={100}
+        onOpenChange={setOpen}
+      >
+        {/* ✅ make trigger inline and valid within <p> */}
+        <HoverCardPrimitive.Trigger asChild>
+          <Link
+            href={url}
+            onMouseMove={handleMouseMove}
+            className={cn("text-black dark:text-white", className)}
+          >
+            {children}
+          </Link>
+        </HoverCardPrimitive.Trigger>
+
+        <HoverCardPrimitive.Content
+          className="[transform-origin:var(--radix-hover-card-content-transform-origin)]"
+          side="top"
+          align="center"
+          sideOffset={10}
+        >
+          <AnimatePresence>
+            {isOpen && (
+              <motion.div
+                initial={{ opacity: 0, y: 20, scale: 0.6 }}
+                animate={{
+                  opacity: 1,
+                  y: 0,
+                  scale: 1,
+                  transition: { type: "spring", stiffness: 260, damping: 20 },
+                }}
+                exit={{ opacity: 0, y: 20, scale: 0.6 }}
+                className="shadow-xl rounded-xl"
+                style={{ x: translateX }}
+              >
+                <Link
+                  href={url}
+                  className="block p-1 bg-white border-2 border-transparent shadow rounded-xl hover:border-neutral-200 dark:hover:border-neutral-800"
+                  style={{ fontSize: 0 }}
+                >
+                  <Image
+                    src={isStatic ? imageSrc : src}
+                    width={width}
+                    height={height}
+                    quality={quality}
+                    layout={layout}
+                    priority
+                    className="rounded-lg"
+                    alt="preview image"
+                  />
+                </Link>
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </HoverCardPrimitive.Content>
+      </HoverCardPrimitive.Root>
+    </>
+  );
 };

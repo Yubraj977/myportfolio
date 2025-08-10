@@ -9,7 +9,7 @@ const navItems = [
   { name: 'Gallery', path: '/gallery' },
   { name: 'Stack', path: '/stack' },
   { name: 'Timeline', path: '/timeline' },
-  { name: 'Playground', path: '/playground' },
+  { name: 'Contact', path: '/contact' },
 ];
 
 export default function Nav() {
