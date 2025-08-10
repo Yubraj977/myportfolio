@@ -1,9 +1,10 @@
 import localFont from "next/font/local";
 import "./globals.css";
-import Nav from "./components/Nav";
 import Rightpannel from "./components/Rightpannel";
+import LeftPannel from "./components/leftPannel";
 import { LampDemo } from "./components/Ancertenity/lamp";
 import { ThemeChanger } from "./utils.js/toggleTheme";
+import Nav from "./components/Nav";
 import Providers from "@/providers";
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -34,10 +35,10 @@ export default function RootLayout({ children }) {
       >
         <Providers className="">
           
-        <div className="flex lg:h-screen overflow-hidden w-full lg:pt-16 flex-col  border-red-500 lg:flex-row  ">
+        <div className="flex lg:h-screen overflow-hidden w-full flex-col  border-red-500 lg:flex-row  ">
          
-          <div className="overflow-hidden lg:w-[30%] w-full z-50">
-            <Nav />
+          <div className="overflow-hidden lg:w-[23%] w-full z-50">
+            <LeftPannel/>
           </div>
 
           {/* Espically for the mobile device */}
@@ -48,7 +49,7 @@ export default function RootLayout({ children }) {
 
           <div className="flex-1 overflow-y-scroll  -overflow-y-scroll  w-full lg:w-3/4 no-scrollbar h-full z-0 lg:mt-10  mt-0 ">
           
-
+          <Nav /> 
             {children}
           </div>
 

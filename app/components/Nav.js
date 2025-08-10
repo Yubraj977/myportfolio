@@ -1,106 +1,53 @@
+'use client';
 
-import React from "react";
-import Image from "next/image";
-import { ImagesSliderDemo } from "./ui/ImagesSliderDemo";
-import { SiGooglenews } from "react-icons/si";
-import { IoPeopleSharp } from "react-icons/io5";
-import { IoLinkSharp } from "react-icons/io5";
-import { FaCat } from "react-icons/fa";
-import { GiSittingDog } from "react-icons/gi";
-import { GiJumpingDog } from "react-icons/gi";
-import { GlobeDemo } from "./ui/GlobeDemo";
-import { LampDemo } from "./Ancertenity/lamp";
-import { LinkPreviewDemoSecond } from "./ui/LinkPreviewDemo";
-import Home from "./3D/Home";
-import Link from "next/link";
-import { ThemeChanger } from "../utils.js/toggleTheme";
+import { usePathname, useRouter } from 'next/navigation';
+import { useState } from 'react';
+import clsx from 'clsx';
 
-const Nav = () => {
+const navItems = [
+  { name: 'Blogs', path: '/' }, // Homepage shows blogs
+  { name: 'Gallery', path: '/gallery' },
+  { name: 'Stack', path: '/stack' },
+  { name: 'Timeline', path: '/timeline' },
+  { name: 'Playground', path: '/playground' },
+];
+
+export default function Nav() {
+  const pathname = usePathname();
+  const router = useRouter();
+  const [hovered, setHovered] = useState(null);
+
   return (
-    <div className=" -r-[0.5px]  w-full  00 flex flex-col lg:pl-52  overflow-hidden z-50 max-h-screen">
-      {/* The Profile Section which should be movabl */}
-      <div className=" h-full  flex flex-col  items-center  justify-center     px-4 ">
-        
-        <div className=" rounded-full flex justify-center items-center border-2  border-slate-900">
-       
-{/* <div className="h-60 w-60 justify-center items-center flex object-cover rounded-full object-center">
+    <nav className="sticky top-0 z-40 w-full backdrop-blur-md bg-white/70 dark:bg-black/30 border-b border-gray-200 dark:border-gray-800 shadow-sm">
+      <ul className="flex gap-4 overflow-x-auto no-scrollbar justify-center px-6 py-3 text-sm font-medium text-gray-700 dark:text-gray-300">
+        {navItems.map((item, index) => {
+          const isActive = pathname === item.path;
 
-<Home/>
-</div> */}
-          
-          <Image
-            src="/cyberhead.png"
-            width={500}
-            height={500}
-            alt="Picture of the author"
-            className="h-60 w-60 object-cover rounded-full object-center scale-x-[-1] -rotate-[9deg]"
-          />
-         
-        </div>
-          
-       
+          return (
+            <li
+              key={item.name}
+              onClick={() => router.push(item.path)}
+              onMouseEnter={() => setHovered(index)}
+              onMouseLeave={() => setHovered(null)}
+              className={clsx(
+                'relative px-4 py-2 cursor-pointer transition-all duration-200 rounded-md',
+                isActive && 'text-blue-600 dark:text-blue-400 font-bold'
+              )}
+            >
+              {item.name}
 
-        <div className="mt-4 flex flex-col ">
-          <div className="flex gap-6 ">
-          <Link href="/"> 
-          <h1 className="font-bold text-3xl ">Yubraj Khatri</h1>
-          </Link>
-          <ThemeChanger />
-          </div>
-          <Link href="/"> 
-          <p className="opacity-45"> Yubraj977</p>
-          </Link>
-          
-          <LinkPreviewDemoSecond />
-        </div>
-
-        {/* Seciton for my newsletter */}
-        <div className="mt-4 flex items-start gap-3 font-bold text-sm  w-full ">
-          <SiGooglenews />
-          <p>8 Followers</p>
-          <IoPeopleSharp />
-          <p>Join Fast</p>
-        </div>
-
-        {/* My some important links */}
-            <hr/>
-
-        <div className="mt-10 text-center  w-full ">
-          <hr/>
-          <h4 className="mt-2">💬 Languages:</h4>
-          <pre className="text-[0.75rem] text-left mx-auto max-w-lg">
-            {`
-English     ████████░░░░░░░░  60.45%
-Hindi       ███████████░░░░░   80.45%
-Nepali      ████████████████ 99.99%
-JavaScript  ████████████████ 100%
-Java        ████████████████  100%
-`}
-          </pre>
-<hr className="mt-4"/>
-          <h4 className="mt-2">💻 Operating Systems:</h4>
-          <pre className="text-sm text-left mx-auto max-w-lg mb-2">
-            {`
-Windows  █████████████████  100%
-Mac      █████████████░░░░ 85%
-Linux    ████████████░░░░░ 80%
-`}
-          </pre>
-          <hr/>
-
-<a href="https://gallery.yubrajkhatri.com.np/">    <button className=" my-4 px-4 py-2 rounded-md font-medium text-gray-800 bg-gray-200 hover:bg-gray-300 dark:text-gray-200 dark:bg-gray-700 dark:hover:bg-gray-600 transition duration-200">
-      Watch My Gallery
-    </button>
-    </a>
-   
-      
-
-          <hr/>
-
-        </div>
-      </div>
-    </div>
+              {/* Bottom indicator animation */}
+              <span
+                className={clsx(
+                  'absolute left-1/2 -bottom-[2px] h-[2px] w-0 bg-blue-500 dark:bg-blue-400 transition-all duration-300 ease-in-out',
+                  hovered === index && 'w-full -translate-x-1/2',
+                  isActive && 'w-full -translate-x-1/2'
+                )}
+              />
+            </li>
+          );
+        })}
+      </ul>
+    </nav>
   );
-};
-
-export default Nav;
+}
