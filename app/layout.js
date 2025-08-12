@@ -1,11 +1,11 @@
+// app/layout.jsx
 import localFont from "next/font/local";
 import "./globals.css";
 import Rightpannel from "./components/Rightpannel";
 import LeftPannel from "./components/leftPannel";
-import { LampDemo } from "./components/Ancertenity/lamp";
-import { ThemeChanger } from "./utils.js/toggleTheme";
 import Nav from "./components/Nav";
 import Providers from "@/providers";
+
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
@@ -33,31 +33,31 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Providers className="">
-          
-        <div className="flex lg:h-screen overflow-hidden w-full flex-col  border-red-500 lg:flex-row  ">
-         
-          <div className="overflow-hidden lg:w-[23%] w-full z-50">
-            <LeftPannel/>
-          </div>
+        <Providers>
+          <div className="flex lg:h-screen overflow-hidden w-full flex-col lg:flex-row">
+            {/* LEFT PANEL */}
+            <div className="overflow-hidden lg:w-[23%] w-full z-50 bg-white dark:bg-[#0f0f0f] border-r border-neutral-200 dark:border-neutral-800">
+              <LeftPannel />
+            </div>
 
-          {/* Espically for the mobile device */}
-          <div className="lg:hidden md:hidden overflow-hidden w-full lg:w-1/4 mt-20">
-            <Rightpannel />
-            
-          </div>
+            {/* MOBILE RIGHT PANEL */}
+            <div className="lg:hidden md:hidden overflow-hidden w-full">
+              <Rightpannel />
+            </div>
 
-          <div className="flex-1 overflow-y-scroll  -overflow-y-scroll  w-full lg:w-3/4 no-scrollbar h-full z-0 lg:mt-10  mt-0 ">
-          
-          <Nav /> 
-            {children}
-          </div>
+            {/* MAIN CONTENT */}
+            <div className="flex-1 overflow-y-scroll no-scrollbar w-full h-full bg-white dark:bg-[#0f0f0f]">
+              {/* Nav now starts flush at top */}
+              <Nav />
+              {children}
+            </div>
 
-          <div className="hidden lg:block md:flex overflow-hidden w-full  lg:w-1/4">
-            <Rightpannel />
+            {/* RIGHT PANEL */}
+            <div className="hidden lg:block md:flex overflow-hidden w-full lg:w-1/4 border-l border-neutral-200 dark:border-neutral-800">
+              <Rightpannel />
+            </div>
           </div>
-        </div>
-       </Providers>
+        </Providers>
       </body>
     </html>
   );

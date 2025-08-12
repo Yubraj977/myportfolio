@@ -223,21 +223,26 @@ const cards = [
     },
   },
   {
-    description: "Hign School Website",
-    title: "Himal Academy ",
-    src: "/himal.png",
+    description: "Handmade wallpaper app for iOS & Android",
+    title: "ArrayWall",
+    src: "/arraywall.png",
     ctaText: "View",
-    ctaLink: "https://www.himalacademy.com/",
+    ctaLink: "https://arraywall.yubrajkhatri.com.np/",
     content: () => {
       return (
-        (<p>
-         Himal Academy is an educational website I developed using<span className="fong-bold text-green-500"> React, React Router,
-          and Tailwind CSS</span>  to deliver a clean, intuitive, and responsive design.
-           The website serves as a platform to showcase the academy’s offerings, emphasizing accessibility and
-            seamless navigation. With React Router, I implemented smooth and<span className="fong-bold text-green-500"> dynamic routing </span>, allowing users to easily explore various
-             sections of the site. The use of Tailwind CSS ensured a <span className="fong-bold text-green-500">modern, consistent, and mobile-friendly interface,</span> catering to users on any device.
-              This project highlights my proficiency in building interactive, user-centric websites while maintaining a focus on performance and responsiveness.
-                  </p>)
+        <p>
+          ArrayWall is a free, cross‑platform wallpaper app built with
+          <span className="font-bold text-green-500"> Expo/React Native</span>.
+          It features fast browsing with cached images, tag‑based discovery,
+          bookmarks, and one‑tap setting of wallpapers. The backend uses
+          <span className="font-bold text-green-500"> Supabase (PostgreSQL)</span>
+          for data and <span className="font-bold text-green-500">Cloudinary</span> for media storage,
+          with secure authentication via
+          <span className="font-bold text-green-500"> Clerk</span>. Published on both the
+          <span className="font-bold text-green-500"> Play Store</span> and
+          <span className="font-bold text-green-500"> App Store</span>, it’s optimized for
+          offline use and smooth performance.
+        </p>
       );
     },
   },
