@@ -247,31 +247,7 @@ const cards = [
     },
   },
 
-  {
-    description: "Ecommerce Website ",
-    title: "VedicHoneyProducts",
-    src: "/vedichoney.png",
-    ctaText: "view",
-    ctaLink: "https://vedichoneyproduct.com/",
-    content: () => {
-      return (
-        (
-          <p>
-          Vedic Honey Products is an online e-commerce website I developed using
-          <span className="font-bold text-green-500">React, Redux, React Router, Tailwind CSS,</span> and several other advanced technologies. The platform manages
-          <span className="font-bold text-green-500">three types of users</span> with dedicated dashboards, ensuring tailored functionality for each user group.
-          With <span className="font-bold text-green-500">Redux</span>, I implemented robust state management, while
-          <span className="font-bold text-green-500">session and cookies</span> are seamlessly handled using
-          <span className="font-bold text-green-500">JWT</span> for secure and smooth login experiences.
-          Navigation is powered by <span className="font-bold text-green-500">React Router</span>, allowing users to explore the site effortlessly. To visualize data,
-          I integrated <span className="font-bold text-green-500">Chart.js</span>, providing insightful and interactive analytics within the dashboards.
-          The use of <span className="font-bold text-green-500">Tailwind CSS</span> ensures a modern, responsive design that adapts seamlessly to any device.
-          This project demonstrates my ability to build feature-rich, scalable, and user-centric web applications with a focus on performance and usability.
-        </p>
-                  )
-      );
-    },
-  },
+  
   {
     description: "Movie Website ",
     title: "YmsHub",

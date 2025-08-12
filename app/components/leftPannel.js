@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect } from "react";
+import React from "react";
 import Link from "next/link";
 import { ThemeChanger } from "../utils.js/toggleTheme";
 import { LinkPreviewDemoSecond } from "./ui/LinkPreviewDemo";
@@ -17,89 +17,29 @@ import {
   FiDownload,
 } from "react-icons/fi";
 
-// --- Enable the <spline-viewer> custom element
-import "@splinetool/viewer";
-
-/* ================================================
-   Dev-only console filter for Spline's noisy warning
-   ================================================ */
-function DevFilterSplineWarning() {
-  useEffect(() => {
-    if (process.env.NODE_ENV !== "development") return;
-
-    const originalError = console.error;
-    console.error = (...args) => {
-      // Hide only the specific Spline viewer warning:
-      if (
-        args.some(
-          (a) =>
-            typeof a === "string" &&
-            a.includes("Missing property") &&
-            a.includes("@splinetool/viewer")
-        )
-      ) {
-        return; // swallow this one
-      }
-      originalError(...args);
-    };
-
-    return () => {
-      console.error = originalError;
-    };
-  }, []);
-
-  return null;
-}
-
-/* ==========================
-   Spline Avatar (viewer URL)
-   ========================== */
-function SplineAvatar({
-  url = "https://prod.spline.design/a44gx0X3K7jNVvyR/scene.splinecode", // use your scene.splinecode URL
-  scale = 1.5,    // zoom in
-  offsetX = 0.10, // +right/-left  (as % of frame)
-  offsetY = 0.14, // +down/-up
-  interactive = true,
-}) {
-  return (
-    <div className="relative overflow-hidden rounded-full w-40 h-40 md:w-48 md:h-48">
-      <div
-        className="absolute inset-0"
-        style={{
-          transform: `translate(${offsetX * 100}%, ${offsetY * 100}%) scale(${scale})`,
-          transformOrigin: "center",
-          pointerEvents: interactive ? "auto" : "none",
-        }}
-      >
-        <spline-viewer
-          url={url}
-          style={{ width: "100%", height: "100%" }}
-        />
-      </div>
+import dynamic from "next/dynamic";
+import { SplineErrorFilter } from "./SplineErrorFilter";
+// Dynamically import SplineAvatar to avoid SSR issues
+const SplineAvatar = dynamic(() => import("./SplineAvatar"), { 
+  ssr: false,
+  loading: () => (
+    <div className="relative overflow-hidden rounded-full w-40 h-40 md:w-48 md:h-48 bg-gradient-to-br from-purple-500/20 to-pink-500/20 flex items-center justify-center">
+      <div className="w-8 h-8 border-2 border-purple-500 border-t-transparent rounded-full animate-spin" />
     </div>
-  );
-}
+  )
+});
 
-/* ================
-   LEFT PANEL PAGE
-   ================ */
 export default function LeftPannel() {
   return (
     <div className="bg-green300 h-full w-full flex flex-col lg:pl-10 overflow-y-auto no-scrollbar z-50 max-h-screen">
-      {/* Dev-only filter for the Spline warning */}
-      <DevFilterSplineWarning />
+      {/* Enhanced Spline error filter */}
+      <SplineErrorFilter />
 
       {/* Profile Section */}
       <div className="flex flex-col items-center px-3 md:px-4 pt-3 md:pt-4 pb-5 md:pb-6">
         {/* Avatar (Spline) */}
         <div className="flex justify-center items-center">
-          <SplineAvatar
-            // tweak these if you want a different crop
-            scale={1.5}
-            offsetX={0.10}
-            offsetY={0.14}
-            url="https://prod.spline.design/a44gx0X3K7jNVvyR/scene.splinecode"
-          />
+          <SplineAvatar scale={1.5} offsetX={0.1} offsetY={0.14} />
         </div>
 
         {/* Name / handle / theme */}
@@ -121,12 +61,9 @@ export default function LeftPannel() {
             <LinkPreviewDemoSecond />
           </div>
 
-          {/* Status — same hover style as bio */}
+          {/* Status */}
           <div className="mt-2.5 md:mt-3 max-w-xs">
-            <div
-              className="text-neutral-400 text-xs sm:text-sm whitespace-pre-line w-full text-justify break-words"
-              role="paragraph"
-            >
+            <div className="text-neutral-400 text-xs sm:text-sm whitespace-pre-line w-full text-justify break-words">
               <span className="font-semibold text-neutral-300 dark:text-neutral-200">
                 Now:
               </span>{" "}
@@ -141,10 +78,7 @@ export default function LeftPannel() {
               <span> (FastAPI, OpenAI)</span>
             </div>
 
-            <div
-              className="mt-1 text-neutral-400 text-xs sm:text-sm whitespace-pre-line w-full text-justify break-words"
-              role="paragraph"
-            >
+            <div className="mt-1 text-neutral-400 text-xs sm:text-sm whitespace-pre-line w-full text-justify break-words">
               <span className="font-semibold text-neutral-300 dark:text-neutral-200">
                 Open to:
               </span>{" "}
@@ -160,7 +94,7 @@ export default function LeftPannel() {
             </div>
           </div>
 
-          {/* Quick links — responsive grid */}
+          {/* Quick links */}
           <div className="mt-3 grid grid-cols-1 sm:grid-cols-2 gap-2 w-full max-w-xs text-[14px] sm:text-[15px]">
             <a
               href="mailto:yubraj@example.com"
@@ -169,7 +103,6 @@ export default function LeftPannel() {
               <FiMail className="opacity-80 text-[16px] sm:text-[17px]" />
               <span>Email</span>
             </a>
-
             <a
               href="https://github.com/Yubraj977"
               target="_blank"
@@ -179,7 +112,6 @@ export default function LeftPannel() {
               <FiGithub className="opacity-80 text-[16px] sm:text-[17px]" />
               <span>GitHub</span>
             </a>
-
             <a
               href="https://instagram.com/001mycreativesite"
               target="_blank"
@@ -189,7 +121,6 @@ export default function LeftPannel() {
               <FiInstagram className="opacity-80 text-[16px] sm:text-[17px]" />
               <span>Instagram</span>
             </a>
-
             <a
               href="https://youtube.com/@yourchannel"
               target="_blank"
@@ -215,23 +146,19 @@ export default function LeftPannel() {
                   8
                 </span>
               </div>
-
               <Link
                 href="/subscribe"
                 className="inline-flex items-center gap-1 rounded-md px-2.5 py-1.5 text-[12px] sm:text-[13px] font-semibold border border-neutral-300 dark:border-neutral-700 hover:bg-black/5 dark:hover:bg-white/5 transition"
-                aria-label="Subscribe to newsletter"
               >
                 <FiBell className="text-[14px] sm:text-[15px]" />
                 Subscribe
               </Link>
             </div>
-
             <div className="mt-2 flex items-center justify-between text-[12px] sm:text-[13px] opacity-70">
               <span>Twice a month. No spam.</span>
               <Link
                 href="/rss.xml"
                 className="inline-flex items-center gap-1 hover:opacity-100 transition"
-                aria-label="RSS feed"
               >
                 <FiRss className="text-[14px] sm:text-[15px]" /> RSS
               </Link>
@@ -264,7 +191,7 @@ export default function LeftPannel() {
           <h3 className="text-xs sm:text-sm font-bold mb-2 text-center">
             Operating Systems
           </h3>
-          <div className="w-full bg-white/60 dark:bg-white/5 border dark:border-white/10 backdrop-blur-sm shadow-md dark:shadow-xl rounded-xl px-3 py-2.5 sm:px-4 sm:py-3 flex justify-around items-center text-lg sm:text-2xl text-gray-700 dark:text-gray-300 transition-all duration-300">
+          <div className="w-full bg-white/60 dark:bg-white/5 border dark:border-white/10 backdrop-blur-sm shadow-md dark:shadow-xl rounded-xl px-3 py-2.5 sm:px-4 sm:py-3 flex justify-around items-center text-lg sm:text-2xl text-gray-700 dark:text-gray-300">
             <FaApple className="hover:scale-110 transition-transform" />
             <FaWindows className="hover:scale-110 transition-transform" />
             <FaLinux className="hover:scale-110 transition-transform" />
