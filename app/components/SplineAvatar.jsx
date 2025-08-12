@@ -4,7 +4,7 @@ import React from "react";
 
 export default function SplineAvatar({
   url = "https://prod.spline.design/a44gx0X3K7jNVvyR/scene.splinecode",
-  scale = 1.5,
+  scale = 0.8, // Changed from -2 to 0.8 for zoomed out view
   offsetX = 0.10,
   offsetY = 0.14,
   interactive = true,
@@ -81,7 +81,7 @@ export default function SplineAvatar({
       <div
         className="absolute inset-0"
         style={{
-          transform: `translate(${offsetX * 100}%, ${offsetY * 100}%) scale(${scale})`,
+          transform: `translate(${offsetX * 100}%, ${offsetY * 100}%) scale(${Math.abs(scale)})`, // Use Math.abs to ensure positive scale
           transformOrigin: "center",
           pointerEvents: interactive ? "auto" : "none",
         }}
