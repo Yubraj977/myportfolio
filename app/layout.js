@@ -5,6 +5,7 @@ import Rightpannel from "./components/Rightpannel";
 import LeftPannel from "./components/leftPannel";
 import Nav from "./components/Nav";
 import Providers from "@/providers";
+import { Analytics } from "@vercel/analytics/next";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -33,6 +34,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <Analytics />
         <Providers>
           <div className="flex lg:h-screen overflow-hidden w-full flex-col lg:flex-row">
             {/* LEFT PANEL */}

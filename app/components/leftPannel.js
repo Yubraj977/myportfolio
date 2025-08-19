@@ -21,13 +21,13 @@ import dynamic from "next/dynamic";
 import { SplineErrorFilter } from "./SplineErrorFilter"; // Import the improved filter
 
 // Dynamically import SplineAvatar to avoid SSR issues
-const SplineAvatar = dynamic(() => import("./SplineAvatar"), { 
+const SplineAvatar = dynamic(() => import("./SplineAvatar"), {
   ssr: false,
   loading: () => (
     <div className="relative overflow-hidden rounded-full w-40 h-40 md:w-48 md:h-48 bg-gradient-to-br from-purple-500/20 to-pink-500/20 flex items-center justify-center">
       <div className="w-8 h-8 border-2 border-purple-500 border-t-transparent rounded-full animate-spin" />
     </div>
-  )
+  ),
 });
 
 export default function LeftPannel() {
@@ -200,6 +200,7 @@ export default function LeftPannel() {
           </div>
 
           {/* Actions */}
+          {/* Actions */}
           <div className="mt-3 grid grid-cols-2 gap-2 w-full text-sm sm:text-[15px]">
             <Link
               href="/gallery"
@@ -207,12 +208,17 @@ export default function LeftPannel() {
             >
               Watch My Gallery
             </Link>
-            <Link
-              href="/Yubraj_Khatri_CV.pdf"
+
+            {/* CV with LinkPreview hover */}
+            <LinkPreview
+              url="/api/download-cv" // keeps your download endpoint
+              imageSrc="/cv.png"
+              isStatic
               className="w-full bg-white/10 hover:bg-white/20 border border-white/20 transition py-2 px-3 sm:py-2.5 sm:px-3.5 rounded-xl font-semibold text-center flex items-center justify-center gap-2"
             >
-              <FiDownload className="text-[16px] sm:text-[17px]" /> CV
-            </Link>
+              <FiDownload className="text-[16px] sm:text-[17px]" />
+              <span>CV</span>
+            </LinkPreview>
           </div>
         </div>
       </div>
