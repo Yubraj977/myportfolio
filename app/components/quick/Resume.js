@@ -51,7 +51,7 @@ const Resume = () => {
           <div>
             <p>
               <strong>Movie Downloading Site (YmsHub)</strong> -{' '}
-              <a href="https://www.ymshub.xyz/" target="_blank" className="underline text-[#c8a27b]">LINK</a>
+              <a href="https://ymshub.yubrajkhatri.com.np/" target="_blank" className="underline text-[#c8a27b]">LINK</a>
             </p>
             <p>Technologies: MERN, Redux, Firebase, MongoDB</p>
             <p>Description: Fully functional movie downloading site with state management and CRUD operations.</p>

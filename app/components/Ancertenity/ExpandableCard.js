@@ -253,7 +253,7 @@ const cards = [
     title: "YmsHub",
     src: "/ymshub.png",
     ctaText: "view",
-    ctaLink: "https://www.ymshub.xyz/",
+    ctaLink: "https://ymshub.yubrajkhatri.com.np/",
     content: () => {
       return (
         (
