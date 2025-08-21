@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { LinkPreview } from '@/app/components/Ancertenity/link-preview';
+import emailjs from '@emailjs/browser';
 import {
   FiGithub, FiLinkedin, FiMail, FiSend, FiCopy, FiCheck, FiClock, FiUserCheck, FiAlertCircle
 } from 'react-icons/fi';
@@ -37,13 +38,29 @@ export default function Page() {
     if (!validate()) return;
     setBusy(true);
 
-    // TODO: replace with your API (Formspree/Resend/Nodemailer)
-    await new Promise((r) => setTimeout(r, 900));
+    try {
+      // Send email using EmailJS
+      await emailjs.send(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
+        {
+          from_name: values.name,
+          from_email: values.email,
+          subject: values.subject || 'Contact Form Message',
+          message: values.message,
+        },
+        process.env.NEXT_PUBLIC_EMAILJS_USER_ID
+      );
 
-    setBusy(false);
-    setSent(true);
-    setValues({ name: '', email: '', subject: '', message: '', _hp: '' });
-    setTimeout(() => setSent(false), 3200);
+      setBusy(false);
+      setSent(true);
+      setValues({ name: '', email: '', subject: '', message: '', _hp: '' });
+      setTimeout(() => setSent(false), 3200);
+    } catch (error) {
+      console.error('EmailJS Error:', error);
+      setBusy(false);
+      setErrors({ message: 'Failed to send message. Please try again.' });
+    }
   };
 
   const copyEmail = async () => {
@@ -245,14 +262,14 @@ export default function Page() {
               </LinkPreview>
 
               <LinkPreview
-                url="https://linkedin.com/in/YOUR-LINKEDIN"
+                url="https://linkedin.com/in/yubraj-khatri-155786243"
                 imageSrc="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=1200&auto=format&fit=crop"
                 isStatic
                 className="flex items-center justify-between rounded-lg border border-neutral-300 dark:border-neutral-700 px-4 py-3
                            hover:bg-black/5 dark:hover:bg-white/5 transition"
               >
                 <span className="inline-flex items-center gap-2"><FiLinkedin /> LinkedIn</span>
-                <span className="text-xs opacity-60">@me</span>
+                <span className="text-xs opacity-60">@yubraj-khatri</span>
               </LinkPreview>
 
               <LinkPreview

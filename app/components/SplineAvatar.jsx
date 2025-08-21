@@ -4,36 +4,35 @@ import React from "react";
 
 export default function SplineAvatar({
   url = "https://prod.spline.design/a44gx0X3K7jNVvyR/scene.splinecode",
-  scale = 0.8, // Changed from -2 to 0.8 for zoomed out view
+  scale = 0.8,
   offsetX = 0.10,
   offsetY = 0.14,
   interactive = true,
 }) {
   const [isLoaded, setIsLoaded] = React.useState(false);
+  const [error, setError] = React.useState(false);
   const viewerRef = React.useRef(null);
 
   React.useEffect(() => {
     let mounted = true;
 
-    // Register the spline-viewer custom element
     const loadSplineViewer = async () => {
       try {
-        if (typeof window !== "undefined" && !customElements.get("spline-viewer")) {
-          await import("@splinetool/viewer");
-          
-          // Wait a bit for the element to be fully registered
-          await new Promise(resolve => setTimeout(resolve, 100));
+        if (typeof window !== "undefined") {
+          if (!customElements.get("spline-viewer")) {
+            await import("@splinetool/viewer");
+            await new Promise(resolve => setTimeout(resolve, 200));
+          }
           
           if (mounted) {
             setIsLoaded(true);
           }
-        } else if (customElements.get("spline-viewer")) {
-          setIsLoaded(true);
         }
       } catch (error) {
-        // Silently handle import errors
+        console.warn("Spline viewer failed to load:", error);
         if (mounted) {
-          setIsLoaded(true); // Still try to render
+          setError(true);
+          setIsLoaded(true);
         }
       }
     };
@@ -68,10 +67,17 @@ export default function SplineAvatar({
   }, [isLoaded]);
 
   if (!isLoaded) {
-    // Show a placeholder while loading
     return (
       <div className="relative overflow-hidden rounded-full w-40 h-40 md:w-48 md:h-48 bg-gradient-to-br from-purple-500/20 to-pink-500/20 flex items-center justify-center">
         <div className="w-8 h-8 border-2 border-purple-500 border-t-transparent rounded-full animate-spin" />
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className="relative overflow-hidden rounded-full w-40 h-40 md:w-48 md:h-48 bg-gradient-to-br from-blue-500/20 to-purple-500/20 flex items-center justify-center">
+        <div className="text-4xl">🤖</div>
       </div>
     );
   }

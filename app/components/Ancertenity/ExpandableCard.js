@@ -66,11 +66,11 @@ export function ExpandableCardDemo() {
             className="w-full md:max-w-[500px]  h-full md:h-fit md:max-h-[90%]  flex flex-col  bg-slate-100 dark:bg-neutral-900 sm:rounded-3xl overflow-hidden">
             <motion.div layoutId={`image-${active.title}-${id}`}>
               <Image
-                
                 width={200}
                 height={200}
                 src={active.src}
-                alt={active.title}
+                alt={`Screenshot of ${active.title} project - ${active.description}`}
+                loading="lazy"
                 className="w-full h-80 lg:h-80 sm:rounded-tr-lg sm:rounded-tl-lg object-cover object-top" />
             </motion.div>
 
@@ -132,7 +132,8 @@ export function ExpandableCardDemo() {
                 width={100}
                 height={100}
                 src={card.src}
-                alt={card.title}
+                alt={`${card.title} project thumbnail - ${card.description}`}
+                loading="lazy"
                 className="h-40 w-40 md:h-14 md:w-14 rounded-lg object-cover object-top" />
             </motion.div>
 

@@ -10,19 +10,93 @@ import {
 } from 'react-icons/fi';
 
 const timeline = [
-  { year: '2031', title: 'Global Reach', desc: 'Building tools that help 1M+ developers & creators.', icon: FiZap,
-    url: 'https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop',
-    imageSrc: 'https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop',
-  },
-  { year: '2030', title: 'Scaling Impact', desc: 'Reliability, docs, performance, and growth.', icon: FiTrendingUp,
+  // Future Goals
+  { 
+    year: '2027', 
+    title: 'Senior Full-Stack Developer', 
+    desc: 'Lead development teams, architect scalable solutions, and mentor junior developers at a top tech company.', 
+    icon: FiTarget,
     url: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1200&auto=format&fit=crop',
     imageSrc: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1200&auto=format&fit=crop',
   },
-  { year: '2029', title: 'Mentorship & Community', desc: 'Mentoring juniors and running local dev meetups.', icon: FiUsers,
-    url: 'https://images.unsplash.com/photo-1551836022-4c4c79ecde51?q=80&w=1200&auto=format&fit=crop',
-    imageSrc: 'https://images.unsplash.com/photo-1551836022-4c4c79ecde51?q=80&w=1200&auto=format&fit=crop',
+  { 
+    year: '2026', 
+    title: 'Graduate & Enter Tech Industry', 
+    desc: 'Complete Computer Science degree at SUNY Brockport and start career as a Software Developer.', 
+    icon: FiBriefcase,
+    url: 'https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=1200&auto=format&fit=crop',
+    imageSrc: 'https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=1200&auto=format&fit=crop',
   },
-  // …add the rest like above
+  
+  // Current & Recent
+  { 
+    year: '2024', 
+    title: 'Computer Science at SUNY Brockport', 
+    desc: 'Started Bachelor\'s in Computer Science with Software Development concentration. Currently maintaining 3.52 GPA.', 
+    icon: FiBookOpen,
+    url: 'https://images.unsplash.com/photo-1562774053-701939374585?q=80&w=1200&auto=format&fit=crop',
+    imageSrc: 'https://images.unsplash.com/photo-1562774053-701939374585?q=80&w=1200&auto=format&fit=crop',
+  },
+  { 
+    year: '2024', 
+    title: 'ArrayWall Mobile App Launch', 
+    desc: 'Published cross-platform wallpaper app built with React Native on both Play Store and App Store.', 
+    icon: FiSmartphone,
+    url: 'https://arraywall.yubrajkhatri.com.np/',
+    imageSrc: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=1200&auto=format&fit=crop',
+  },
+  { 
+    year: '2024', 
+    title: 'YMSHub Movie Platform', 
+    desc: 'Developed full-stack movie streaming platform with TMDB API integration and responsive design.', 
+    icon: FiFilm,
+    url: 'https://ymshub.yubrajkhatri.com.np/',
+    imageSrc: 'https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?q=80&w=1200&auto=format&fit=crop',
+  },
+  { 
+    year: '2023', 
+    title: 'Taste of Nepal Restaurant Site', 
+    desc: 'Built modern restaurant website using Next.js showcasing Nepalese cuisine near Niagara Falls.', 
+    icon: FiCode,
+    url: 'https://www.tastesofnepal.com/',
+    imageSrc: 'https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?q=80&w=1200&auto=format&fit=crop',
+  },
+  
+  // Learning & Certifications
+  { 
+    year: '2023', 
+    title: 'FreeCodeCamp Certifications', 
+    desc: 'Completed JavaScript Algorithms & Data Structures and Responsive Web Design certifications.', 
+    icon: FiFeather,
+    url: 'https://www.freecodecamp.org/certification/Yubraj/responsive-web-design',
+    imageSrc: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop',
+  },
+  { 
+    year: '2022', 
+    title: 'Advanced React & Full-Stack Development', 
+    desc: 'Mastered React ecosystem, Node.js, Express, MongoDB, and modern web development practices.', 
+    icon: FiActivity,
+    url: 'https://images.unsplash.com/photo-1633356122544-f134324a6cee?q=80&w=1200&auto=format&fit=crop',
+    imageSrc: 'https://images.unsplash.com/photo-1633356122544-f134324a6cee?q=80&w=1200&auto=format&fit=crop',
+  },
+  { 
+    year: '2021', 
+    title: 'Web Development Journey Begins', 
+    desc: 'Started learning HTML, CSS, JavaScript, and fell in love with creating digital experiences.', 
+    icon: FiTrendingUp,
+    url: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop',
+    imageSrc: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop',
+  },
+  
+  // Origins
+  { 
+    year: '2020', 
+    title: 'First Line of Code', 
+    desc: 'Wrote my first "Hello World" program and discovered my passion for problem-solving through programming.', 
+    icon: FiZap,
+    url: 'https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=1200&auto=format&fit=crop',
+    imageSrc: 'https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=1200&auto=format&fit=crop',
+  },
 ];
 
 export default function TimelinePage() {
@@ -43,9 +117,15 @@ export default function TimelinePage() {
 
   return (
     <div className="h-screen overflow-y-scroll no-scrollbar px-4 md:px-6 py-10">
-      <h1 className="text-3xl md:text-4xl font-extrabold mb-8 text-center text-gray-900 dark:text-white">
-        📜 My Timeline
-      </h1>
+      <div className="text-center mb-12 max-w-3xl mx-auto">
+        <h1 className="text-3xl md:text-4xl font-extrabold mb-4 text-gray-900 dark:text-white">
+          📜 My Journey
+        </h1>
+        <p className="text-lg text-neutral-600 dark:text-neutral-400">
+          From writing my first "Hello World" to building full-stack applications - 
+          here's my evolution as a developer and the milestones that shaped my career.
+        </p>
+      </div>
 
       <div className="relative max-w-5xl mx-auto">
         {/* center spine */}

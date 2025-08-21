@@ -13,7 +13,7 @@ function page() {
         src={"/web.png"}
         width={10000}
         height={10000}
-        alt="Certificate of completion for Data Structures and Algorithms course"
+        alt="Certificate of completion for Responsive Web Design course"
       ></Image>
             </a>
     </div>
