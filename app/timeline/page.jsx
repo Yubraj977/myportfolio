@@ -10,35 +10,17 @@ import {
 } from 'react-icons/fi';
 
 const timeline = [
-  // Future Goals
-  { 
-    year: '2027', 
-    title: 'Senior Full-Stack Developer', 
-    desc: 'Lead development teams, architect scalable solutions, and mentor junior developers at a top tech company.', 
-    icon: FiTarget,
-    url: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1200&auto=format&fit=crop',
-    imageSrc: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1200&auto=format&fit=crop',
-  },
-  { 
-    year: '2026', 
-    title: 'Graduate & Enter Tech Industry', 
-    desc: 'Complete Computer Science degree at SUNY Brockport and start career as a Software Developer.', 
-    icon: FiBriefcase,
-    url: 'https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=1200&auto=format&fit=crop',
-    imageSrc: 'https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=1200&auto=format&fit=crop',
-  },
-  
   // Current & Recent
   { 
-    year: '2024', 
-    title: 'Computer Science at SUNY Brockport', 
-    desc: 'Started Bachelor\'s in Computer Science with Software Development concentration. Currently maintaining 3.52 GPA.', 
-    icon: FiBookOpen,
-    url: 'https://images.unsplash.com/photo-1562774053-701939374585?q=80&w=1200&auto=format&fit=crop',
-    imageSrc: 'https://images.unsplash.com/photo-1562774053-701939374585?q=80&w=1200&auto=format&fit=crop',
+    year: '2025 Summer', 
+    title: 'AI Education Pilot Research Project', 
+    desc: 'Working on a research project developing an AI-powered educational pilot using FastAPI and OpenAI technologies to enhance learning experiences.', 
+    icon: FiCpu,
+    url: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=1200&auto=format&fit=crop',
+    imageSrc: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=1200&auto=format&fit=crop',
   },
   { 
-    year: '2024', 
+    year: '2025', 
     title: 'ArrayWall Mobile App Launch', 
     desc: 'Published cross-platform wallpaper app built with React Native on both Play Store and App Store.', 
     icon: FiSmartphone,
@@ -47,19 +29,43 @@ const timeline = [
   },
   { 
     year: '2024', 
-    title: 'YMSHub Movie Platform', 
-    desc: 'Developed full-stack movie streaming platform with TMDB API integration and responsive design.', 
-    icon: FiFilm,
-    url: 'https://ymshub.yubrajkhatri.com.np/',
-    imageSrc: 'https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?q=80&w=1200&auto=format&fit=crop',
+    title: 'Computer Science at SUNY Brockport', 
+    desc: 'Started Bachelor\'s in Computer Science with Software Development concentration in Fall 2024. Currently maintaining 3.52 GPA.', 
+    icon: FiBookOpen,
+    url: 'https://www.brockport.edu/',
+    imageSrc: 'https://images.unsplash.com/photo-1562774053-701939374585?q=80&w=1200&auto=format&fit=crop',
   },
   { 
-    year: '2023', 
+    year: '2024', 
     title: 'Taste of Nepal Restaurant Site', 
     desc: 'Built modern restaurant website using Next.js showcasing Nepalese cuisine near Niagara Falls.', 
     icon: FiCode,
     url: 'https://www.tastesofnepal.com/',
     imageSrc: 'https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?q=80&w=1200&auto=format&fit=crop',
+  },
+  { 
+    year: '2024', 
+    title: 'YMSHub Movie Platform', 
+    desc: 'Developed full-stack movie streaming platform with TMDB API integration and responsive design.', 
+    icon: FiFilm,
+    url: 'https://ymshub.yubrajkhatri.com.np/',
+    imageSrc: '/ymshub.png',
+  },
+  { 
+    year: '2023-2024', 
+    title: 'VedicHoneyProducts E-commerce Site', 
+    desc: 'Developed e-commerce website for VedicHoneyProducts with product catalog, shopping cart, and payment integration.', 
+    icon: FiCode,
+    url: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=1200&auto=format&fit=crop',
+    imageSrc: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=1200&auto=format&fit=crop',
+  },
+  { 
+    year: '2023-2024', 
+    title: 'Himal Academy School Website', 
+    desc: 'Built comprehensive school website for Himal Academy with student portal, course management, and administrative features.', 
+    icon: FiBookOpen,
+    url: 'https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=1200&auto=format&fit=crop',
+    imageSrc: 'https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=1200&auto=format&fit=crop',
   },
   
   // Learning & Certifications
@@ -90,7 +96,7 @@ const timeline = [
   
   // Origins
   { 
-    year: '2020', 
+    year: '2021', 
     title: 'First Line of Code', 
     desc: 'Wrote my first "Hello World" program and discovered my passion for problem-solving through programming.', 
     icon: FiZap,

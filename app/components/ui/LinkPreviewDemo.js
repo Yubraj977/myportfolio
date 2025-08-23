@@ -46,7 +46,15 @@ export function LinkPreviewDemoSecond() {
           imageSrc="https://res.cloudinary.com/dr040e5us/image/upload/v1733011951/pldzyrtmcmeju3tfbdan.jpg"
           className="font-bold bg-gradient-to-br from-purple-500 to-pink-500 ml-1"
         >
-          Yubraj Khatri
+          Yubraj
+        </InlinePreview>
+        <span> </span>
+        <InlinePreview
+          url="https://res.cloudinary.com/dr040e5us/image/upload/v1755941101/yubraj2_fzuphy.jpg"
+          imageSrc="https://res.cloudinary.com/dr040e5us/image/upload/v1755941101/yubraj2_fzuphy.jpg"
+          className="font-bold bg-gradient-to-br from-purple-500 to-pink-500"
+        >
+          Khatri
         </InlinePreview>
 
         <span> Web Developer, App Developer, Bot gamer. I am learning </span>
