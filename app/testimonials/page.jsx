@@ -62,7 +62,7 @@ export default function TestimonialsPage() {
             <span className="block h-[3px] w-32 mx-auto mt-4 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full" />
           </h1>
           <p className="text-lg text-neutral-600 dark:text-neutral-400 max-w-2xl mx-auto">
-            Feedback from clients, colleagues, and collaborators I've had the pleasure of working with
+            Feedback from clients, colleagues, and collaborators I&apos;ve had the pleasure of working with
           </p>
         </header>
 
@@ -118,7 +118,7 @@ export default function TestimonialsPage() {
 
               {/* Quote */}
               <blockquote className="text-neutral-700 dark:text-neutral-300 mb-6 leading-relaxed">
-                "{testimonial.text}"
+                &ldquo;{testimonial.text}&rdquo;
               </blockquote>
 
               {/* Project */}
@@ -177,8 +177,8 @@ export default function TestimonialsPage() {
         >
           <h2 className="text-2xl font-bold mb-4">Ready to Work Together?</h2>
           <p className="text-neutral-600 dark:text-neutral-400 mb-6 max-w-2xl mx-auto">
-            Join these satisfied clients and let's create something amazing together. 
-            I'm passionate about delivering high-quality solutions that exceed expectations.
+            Join these satisfied clients and let&apos;s create something amazing together. 
+            I&apos;m passionate about delivering high-quality solutions that exceed expectations.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 

@@ -36,7 +36,7 @@ class ErrorBoundary extends React.Component {
                 Oops! Something went wrong
               </h1>
               <p className="text-neutral-600 dark:text-neutral-400">
-                We're sorry for the inconvenience. The page encountered an unexpected error.
+                We&apos;re sorry for the inconvenience. The page encountered an unexpected error.
               </p>
             </div>
 

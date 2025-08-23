@@ -122,8 +122,8 @@ export default function TimelinePage() {
           📜 My Journey
         </h1>
         <p className="text-lg text-neutral-600 dark:text-neutral-400">
-          From writing my first "Hello World" to building full-stack applications - 
-          here's my evolution as a developer and the milestones that shaped my career.
+          From writing my first &ldquo;Hello World&rdquo; to building full-stack applications - 
+          here&apos;s my evolution as a developer and the milestones that shaped my career.
         </p>
       </div>
 

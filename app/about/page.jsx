@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { FiMapPin, FiGraduationCap, FiCode, FiHeart, FiCoffee, FiBookOpen } from 'react-icons/fi';
+import { FiMapPin, FiBook, FiCode, FiHeart, FiCoffee, FiBookOpen } from 'react-icons/fi';
 
 export default function AboutPage() {
   return (
@@ -30,8 +30,8 @@ export default function AboutPage() {
               
               <div className="space-y-4 text-neutral-700 dark:text-neutral-300 leading-relaxed">
                 <p>
-                  Hi! I'm <span className="font-semibold text-neutral-900 dark:text-neutral-100">Yubraj Khatri</span>, 
-                  a passionate software developer currently pursuing my Bachelor's in Computer Science with a 
+                  Hi! I&apos;m <span className="font-semibold text-neutral-900 dark:text-neutral-100">Yubraj Khatri</span>, 
+                  a passionate software developer currently pursuing my Bachelor&apos;s in Computer Science with a 
                   Software Development concentration at <span className="font-semibold">SUNY Brockport</span>.
                 </p>
                 
@@ -42,14 +42,14 @@ export default function AboutPage() {
                 </p>
                 
                 <p>
-                  I'm passionate about creating <span className="font-semibold">meaningful digital experiences</span> that 
-                  solve real-world problems. Whether it's building a restaurant website that showcases Nepalese culture 
+                  I&apos;m passionate about creating <span className="font-semibold">meaningful digital experiences</span> that 
+                  solve real-world problems. Whether it&apos;s building a restaurant website that showcases Nepalese culture 
                   or developing a movie streaming platform, I believe in crafting solutions that make a difference.
                 </p>
                 
                 <p>
-                  When I'm not coding, you'll find me exploring new technologies, contributing to open-source projects, 
-                  or learning about the latest trends in software development. I'm always excited to take on new 
+                  When I&apos;m not coding, you&apos;ll find me exploring new technologies, contributing to open-source projects, 
+                  or learning about the latest trends in software development. I&apos;m always excited to take on new 
                   challenges and collaborate on innovative projects.
                 </p>
               </div>
@@ -61,7 +61,7 @@ export default function AboutPage() {
             {/* Education */}
             <div className="bg-white/80 dark:bg-white/[0.04] backdrop-blur-sm rounded-2xl border border-neutral-200/70 dark:border-neutral-800 p-6">
               <h3 className="text-lg font-bold mb-4 flex items-center gap-2">
-                <FiGraduationCap className="text-green-500" />
+                <FiBook className="text-green-500" />
                 Education
               </h3>
               <div className="space-y-3">
@@ -157,7 +157,7 @@ export default function AboutPage() {
             href="/contact" 
             className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white px-6 py-3 rounded-lg font-semibold transition"
           >
-            Let's Connect
+            Let&apos;s Connect
           </a>
         </div>
       </div>
