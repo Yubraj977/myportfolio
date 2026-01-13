@@ -72,13 +72,13 @@ export default function Page() {
   };
 
   return (
-    <div className="min-h-screen bg-white text-neutral-900 dark:bg-neutral-950 dark:text-neutral-100 px-6 py-10">
+    <div className="min-h-screen bg-background text-foreground px-6 py-10">
       <div className="mx-auto w-full max-w-5xl">
         {/* Heading */}
         <header className="mb-8">
           <h1 className="text-3xl md:text-4xl font-extrabold tracking-tight inline-block">
             Contact Me
-            <span className="block h-[3px] w-24 mt-2 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full" />
+            <span className="block h-[3px] w-24 mt-2 bg-gradient-to-r from-green-500 to-purple-500 rounded-full" />
           </h1>
           <p className="mt-3 text-neutral-600 dark:text-neutral-400">
             Collaborations, projects, or just saying hi — my inbox is open.
@@ -89,8 +89,8 @@ export default function Page() {
         <div className="mb-6 flex flex-wrap items-center gap-3">
           <button
             onClick={copyEmail}
-            className="inline-flex items-center gap-2 rounded-full border border-blue-500/40 px-3.5 py-1.5 text-sm
-                       text-blue-600 hover:bg-blue-500/10 transition dark:text-blue-400 dark:border-blue-400/40"
+            className="inline-flex items-center gap-2 rounded-full border border-green-500/40 px-3.5 py-1.5 text-sm
+                       text-green-600 hover:bg-green-500/10 transition dark:text-green-400 dark:border-green-400/40"
             aria-label="Copy email"
           >
             {copied ? <FiCheck /> : <FiCopy />}
@@ -113,8 +113,7 @@ export default function Page() {
           {/* Left: Form card */}
           <form
             onSubmit={onSubmit}
-            className="rounded-2xl border border-neutral-200/70 bg-white/80 backdrop-blur-sm p-5 shadow-sm
-                       dark:border-neutral-800 dark:bg-white/[0.04]"
+            className="rounded-2xl border border-border bg-card/80 backdrop-blur-sm p-5 shadow-sm"
           >
             {/* honeypot */}
             <input
@@ -144,7 +143,7 @@ export default function Page() {
                   value={values.name}
                   onChange={onChange}
                   placeholder="e.g., Yubraj Khatri"
-                  className={`w-full rounded-lg border bg-white p-3 text-neutral-900 focus:border-blue-500 focus:outline-none
+                  className={`w-full rounded-lg border bg-white p-3 text-neutral-900 focus:border-green-500 focus:outline-none
                               dark:border-neutral-700 dark:bg-neutral-900 dark:text-neutral-100
                               ${errors.name ? 'border-red-500 focus:border-red-500' : 'border-neutral-300'}`}
                 />
@@ -167,7 +166,7 @@ export default function Page() {
                   value={values.email}
                   onChange={onChange}
                   placeholder="you@example.com"
-                  className={`w-full rounded-lg border bg-white p-3 text-neutral-900 focus:border-blue-500 focus:outline-none
+                  className={`w-full rounded-lg border bg-white p-3 text-neutral-900 focus:border-green-500 focus:outline-none
                               dark:border-neutral-700 dark:bg-neutral-900 dark:text-neutral-100
                               ${errors.email ? 'border-red-500 focus:border-red-500' : 'border-neutral-300'}`}
                 />
@@ -189,7 +188,7 @@ export default function Page() {
                   value={values.subject}
                   onChange={onChange}
                   placeholder="e.g., Freelance project inquiry"
-                  className="w-full rounded-lg border border-neutral-300 bg-white p-3 text-neutral-900 focus:border-blue-500 focus:outline-none
+                  className="w-full rounded-lg border border-neutral-300 bg-white p-3 text-neutral-900 focus:border-green-500 focus:outline-none
                              dark:border-neutral-700 dark:bg-neutral-900 dark:text-neutral-100"
                 />
               </div>
@@ -206,7 +205,7 @@ export default function Page() {
                   value={values.message}
                   onChange={onChange}
                   placeholder="Tell me a bit about your idea, timeline, and goals…"
-                  className={`w-full resize-y rounded-lg border bg-white p-3 text-neutral-900 focus:border-blue-500 focus:outline-none
+                  className={`w-full resize-y rounded-lg border bg-white p-3 text-neutral-900 focus:border-green-500 focus:outline-none
                               dark:border-neutral-700 dark:bg-neutral-900 dark:text-neutral-100
                               ${errors.message ? 'border-red-500 focus:border-red-500' : 'border-neutral-300'}`}
                 />
@@ -220,8 +219,8 @@ export default function Page() {
               <button
                 type="submit"
                 disabled={busy}
-                className="mt-1 inline-flex w-full items-center justify-center gap-2 rounded-lg bg-blue-600 px-4 py-3 font-semibold text-white
-                           transition hover:bg-blue-500 disabled:opacity-60"
+                className="mt-1 inline-flex w-full items-center justify-center gap-2 rounded-lg bg-green-600 px-4 py-3 font-semibold text-white
+                           transition hover:bg-green-500 disabled:opacity-60"
               >
                 {busy ? (
                   <>
@@ -242,8 +241,7 @@ export default function Page() {
           </form>
 
           {/* Right: Socials + LinkPreview buttons */}
-          <aside className="rounded-2xl border border-neutral-200/70 bg-white/60 backdrop-blur-sm p-5 shadow-sm
-                            dark:border-neutral-800 dark:bg-white/[0.03]">
+          <aside className="rounded-2xl border border-border bg-card/60 backdrop-blur-sm p-5 shadow-sm">
             <h2 className="text-lg font-semibold">Find me online</h2>
             <p className="mt-1 text-sm text-neutral-600 dark:text-neutral-400">
               Hover to preview — click to open.

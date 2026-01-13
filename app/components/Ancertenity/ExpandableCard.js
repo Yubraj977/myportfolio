@@ -79,12 +79,12 @@ export function ExpandableCardDemo() {
                 <div className="">
                   <motion.h3
                     layoutId={`title-${active.title}-${id}`}
-                    className="font-bold ">
+                    className="font-bold text-xl md:text-2xl">
                     {active.title}
                   </motion.h3>
                   <motion.p
                     layoutId={`description-${active.description}-${id}`}
-                    className="dark:text-neutral-400 text-neutral-900 ">
+                    className="dark:text-neutral-400 text-neutral-900 text-sm md:text-base mt-1">
                     {active.description}
                   </motion.p>
                 </div>
@@ -121,12 +121,12 @@ export function ExpandableCardDemo() {
           layoutId={`card-${card.title}-${id}`}
           key={`card-${card.title}-${id}`}
           onClick={() => setActive(card)}
-          className="p-4 flex  md:flex-row justify-between items-center  border-red-600  rounded-xl cursor-pointer relative 
+          className="p-3 flex md:flex-row justify-between items-center rounded-lg cursor-pointer relative
             bg-slate-100 hover:bg-slate-200
-           
-            dark:bg-[#232225] hover:dark:bg-neutral-700 
-             my-4 lg:mt-0 md:mt-0">
-          <div className="flex lg:gap-4  md:flex-row  w-full  gap-4">
+
+            dark:bg-[#232225] hover:dark:bg-neutral-700
+             my-3 lg:mt-0 md:mt-0">
+          <div className="flex lg:gap-3 md:flex-row w-full gap-3">
             <motion.div layoutId={`image-${card.title}-${id}`}>
               <Image
                 width={100}
@@ -134,19 +134,19 @@ export function ExpandableCardDemo() {
                 src={card.src}
                 alt={`${card.title} project thumbnail - ${card.description}`}
                 loading="lazy"
-                className="h-40 w-40 md:h-14 md:w-14 rounded-lg object-cover object-top" />
+                className="h-32 w-32 md:h-12 md:w-12 rounded-md object-cover object-top" />
             </motion.div>
 
             <div className=" flex flex-col justify-between">
               <div>
               <motion.h3
                 layoutId={`title-${card.title}-${id}`}
-                className="lg:ont-medium dark:text-white  font-bold  text-center md:text-left">
+                className="lg:ont-medium dark:text-white font-semibold text-sm md:text-base text-center md:text-left">
                 {card.title}
               </motion.h3>
               <motion.p
                 layoutId={`description-${card.description}-${id}`}
-                className="   dark:text-white text-sm lg:text-md  text-center md:text-left">
+                className="dark:text-neutral-400 text-neutral-600 text-[11px] md:text-xs text-center md:text-left mt-0.5">
                 {card.description}
               </motion.p>
               </div>
@@ -204,6 +204,28 @@ export const CloseIcon = () => {
 
 const cards = [
   {
+    description: "AI-powered education research tool",
+    title: "AI Education Pilot",
+    src: "/aipilot-preview.png",
+    ctaText: "View",
+    ctaLink: "https://aipilot2.brockportsigai.org/",
+    content: () => {
+      return (
+        (<p>
+          AI Education Pilot is a research project focused on integrating AI tools into educational environments.
+          Built as part of the <span className="font-bold text-green-500">Brockport SIG-AI initiative</span>, this platform
+          explores how <span className="font-bold text-green-500">artificial intelligence can enhance learning experiences</span> and
+          support educators in creating more effective teaching strategies. The project leverages
+          <span className="font-bold text-green-500"> FastAPI for backend development and OpenAI's API</span> to provide
+          intelligent educational tools. This research initiative aims to bridge the gap between AI technology and
+          practical classroom applications, making advanced AI accessible for educational purposes. The platform demonstrates
+          my expertise in <span className="font-bold text-green-500">AI integration, educational technology, and research-driven development</span>,
+          showcasing how emerging technologies can transform the learning landscape.
+        </p>)
+      );
+    },
+  },
+  {
     description: "Resturant site(Naigra Falls)",
     title: "Taste of Nepal",
     src: "/tasteofnepal.png",
@@ -212,10 +234,10 @@ const cards = [
     content: () => {
       return (
         (<p>
-          Taste for Nepal is a modern website I developed using <span className="fong-bold text-green-500"> Next.js, React, and Tailwind CSS</span> to represent 
-          a Nepalese restaurant located near Niagara. This project showcases a seamless blend of traditional Nepali 
-          culture with contemporary web design, creating an immersive experience for visitors. The site highlights the restaurant’s unique
-           offerings, including authentic Nepalese cuisine and a welcoming ambiance that reflects the spirit of Nepal. By leveraging Next.js 
+          Taste for Nepal is a modern website I developed using <span className="fong-bold text-green-500"> Next.js, React, and Tailwind CSS</span> to represent
+          a Nepalese restaurant located near Niagara. This project showcases a seamless blend of traditional Nepali
+          culture with contemporary web design, creating an immersive experience for visitors. The site highlights the restaurant's unique
+           offerings, including authentic Nepalese cuisine and a welcoming ambiance that reflects the spirit of Nepal. By leveraging Next.js
            for <span className="fong-bold text-green-500"> server-side rendering and optimized performance, React for dynamic components, and Tailwind CSS for a sleek, responsive design, </span>
            the website ensures a delightful and engaging browsing experience. This project demonstrates my ability to use advanced web development
             tools to create visually appealing, functional, and culturally rich websites.
@@ -260,11 +282,11 @@ const cards = [
         (
           <p>
           YMSHub.xyz is a free online movie streaming platform that I developed, showcasing my skills in building dynamic and feature-rich web applications. The website is powered by 
-          <span className="font-bold text-blue-500">Next.js, TMDB API, Tailwind CSS,</span> and other modern technologies. 
-          Using the <span className="font-bold text-blue-500">TMDB API</span>, I implemented a robust data-fetching mechanism to display a wide range of movies with details such as posters, genres, and ratings. 
-          Navigation is optimized through <span className="font-bold text-blue-500">React Router</span>, ensuring seamless exploration across various pages.
-          The platforms user interface is crafted with <span className="font-bold text-blue-500">Tailwind CSS,</span> ensuring a responsive design that provides an excellent experience on both desktop and mobile devices.
-          By utilizing the <span className="font-bold text-blue-500">server-side rendering</span> capabilities of Next.js, the application delivers faster load times and enhanced SEO performance. 
+          <span className="font-bold text-green-500">Next.js, TMDB API, Tailwind CSS,</span> and other modern technologies. 
+          Using the <span className="font-bold text-green-500">TMDB API</span>, I implemented a robust data-fetching mechanism to display a wide range of movies with details such as posters, genres, and ratings. 
+          Navigation is optimized through <span className="font-bold text-green-500">React Router</span>, ensuring seamless exploration across various pages.
+          The platforms user interface is crafted with <span className="font-bold text-green-500">Tailwind CSS,</span> ensuring a responsive design that provides an excellent experience on both desktop and mobile devices.
+          By utilizing the <span className="font-bold text-green-500">server-side rendering</span> capabilities of Next.js, the application delivers faster load times and enhanced SEO performance. 
           This project highlights my expertise in API integration, responsive design, and creating user-friendly platforms, making it a hub for effortless movie exploration.
         </p>
                   )
@@ -282,7 +304,7 @@ const cards = [
   //       (<p>Led Zeppelin, a legendary British rock band, is renowned for their
   //                   innovative sound and profound impact on the music industry. Formed in
   //                   London in 1968, they have become a cultural icon in the rock music
-  //                   world. <br /> <br />Their songs often reflect a blend of blues, hard
+  //                   world. <br /> <br />Their songs often reflect a blend of greens, hard
   //                   rock, and folk music, capturing the essence of the 1970s rock era.
   //                   With a career spanning over a decade, Led Zeppelin has released
   //                   numerous hit albums and singles that have garnered them a massive fan

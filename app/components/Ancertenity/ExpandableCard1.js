@@ -79,12 +79,12 @@ export function ExpandableCardDemo1() {
                 <div className="">
                   <motion.h3
                     layoutId={`title-${active.title}-${id}`}
-                    className="font-bold text-neutral-900  dark:text-neutral-200">
+                    className="font-bold text-neutral-900 dark:text-neutral-200 text-xl md:text-2xl">
                     {active.title}
                   </motion.h3>
                   <motion.p
                     layoutId={`description-${active.description}-${id}`}
-                    className="text-neutral-900 dark:text-neutral-400">
+                    className="text-neutral-900 dark:text-neutral-400 text-sm md:text-base mt-1">
                     {active.description}
                   </motion.p>
                 </div>
@@ -123,27 +123,27 @@ export function ExpandableCardDemo1() {
           layoutId={`card-${card.title}-${id}`}
           key={`card-${card.title}-${id}`}
           onClick={() => setActive(card)}
-          className="p-4  border-red-600  flex  md:flex-row justify-between items-center  dark:hover:bg-neutral-700   rounded-xl cursor-pointer relative  bg-slate-100 hover:bg-neutral-200  dark:bg-[#232225]  my-4 lg:mt-0 md:mt-0">
-          <div className="flex lg:gap-4  md:flex-row  w-full  border-green-500 gap-4">
+          className="p-3 flex md:flex-row justify-between items-center dark:hover:bg-neutral-700 rounded-lg cursor-pointer relative bg-slate-100 hover:bg-neutral-200 dark:bg-[#232225] my-3 lg:mt-0 md:mt-0">
+          <div className="flex lg:gap-3 md:flex-row w-full gap-3">
             <motion.div layoutId={`image-${card.title}-${id}`}>
               <Image
                 width={100}
                 height={50}
                 src={card.src}
                 alt={card.title}
-                className="h-40 w-40 md:h-14 md:w-14 rounded-lg object-cover object-top " />
+                className="h-32 w-32 md:h-12 md:w-12 rounded-md object-cover object-top" />
             </motion.div>
 
             <div className=" flex flex-col justify-between">
               <div>
               <motion.h3
                 layoutId={`title-${card.title}-${id}`}
-                className="lg:ont-medium   font-bold text-neutral-900 dark:text-neutral-100 text-center md:text-left">
+                className="font-semibold text-neutral-900 dark:text-neutral-100 text-sm md:text-base text-center md:text-left">
                 {card.title}
               </motion.h3>
               <motion.p
                 layoutId={`description-${card.description}-${id}`}
-                className=" text-neutral-900 dark:text-slate-100  text-sm lg:text-sm  text-center md:text-left">
+                className="text-neutral-600 dark:text-neutral-400 text-[11px] md:text-xs text-center md:text-left mt-0.5">
                 {card.description}
               </motion.p>
               </div>

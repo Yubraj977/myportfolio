@@ -136,7 +136,7 @@ export default function TimelinePage() {
       <div className="relative max-w-5xl mx-auto">
         {/* center spine */}
         <div className="pointer-events-none absolute inset-y-0 left-1/2 -translate-x-1/2 w-[3px] rounded-full
-                        bg-gradient-to-b from-blue-500/40 via-blue-400/30 to-transparent dark:from-blue-400/40 dark:via-blue-300/25" />
+                        bg-gradient-to-b from-green-500/40 via-green-400/30 to-transparent dark:from-green-400/40 dark:via-green-300/25" />
 
         <motion.ul variants={container} initial="hidden" animate="show" className="space-y-10 md:space-y-14 ">
         {timeline.map((t, i) => {
@@ -159,7 +159,7 @@ export default function TimelinePage() {
                 />
                 {/* node */}
                 <div className="hidden md:block absolute top-4 left-1/2 -translate-x-1/2 w-3 h-3 rounded-full
-                                bg-blue-500 dark:bg-blue-400 ring-4 ring-white dark:ring-neutral-900" />
+                                bg-green-500 dark:bg-green-400 ring-4 ring-white dark:ring-neutral-900" />
 
                 {/* WHOLE CARD IS THE PREVIEW/LINK */}
                 <div className={['md:w-[44%] w-full', left ? 'md:mr-auto' : 'md:ml-auto'].join(' ')}>
@@ -167,11 +167,11 @@ export default function TimelinePage() {
                     url={t.url}
                     imageSrc={t.imageSrc}
                     isStatic
-                    className="block group relative overflow-hidden bg-white/70 dark:bg-white/[0.06]
-                               border border-neutral-200/70 dark:border-neutral-800 rounded-xl
+                    className="block group relative overflow-hidden bg-card/70
+                               border border-border rounded-xl
                                backdrop-blur-sm shadow-sm transition-all duration-300
-                               hover:shadow-xl hover:border-neutral-300/80 dark:hover:border-neutral-700
-                               p-4 md:p-5 focus:outline-none focus:ring-2 focus:ring-blue-400/50"
+                               hover:shadow-xl
+                               p-4 md:p-5 focus:outline-none focus:ring-2 focus:ring-green-400/50"
                   >
                     {/* Year & icon */}
                     <div className="flex items-center gap-2 mb-2 text-gray-700 dark:text-gray-300">
@@ -191,7 +191,7 @@ export default function TimelinePage() {
                       {t.desc}
                     </p>
 
-                    <span className="mt-3 inline-flex items-center gap-1 text-sm font-medium text-blue-600 dark:text-blue-400">
+                    <span className="mt-3 inline-flex items-center gap-1 text-sm font-medium text-green-600 dark:text-green-400">
                       More →
                     </span>
                   </LinkPreview>

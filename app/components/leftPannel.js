@@ -2,14 +2,12 @@
 
 import React from "react";
 import Link from "next/link";
-import { ThemeChanger } from "../utils.js/toggleTheme";
 import { LinkPreviewDemoSecond } from "./ui/LinkPreviewDemo";
 import { LinkPreview } from "@/app/components/Ancertenity/link-preview";
 import { FaApple, FaWindows, FaLinux } from "react-icons/fa";
 import {
   FiUsers,
   FiBell,
-  FiRss,
   FiMail,
   FiGithub,
   FiInstagram,
@@ -37,24 +35,18 @@ export default function LeftPannel() {
       <SplineErrorFilter />
 
       {/* Profile Section */}
-      <div className="flex flex-col items-center justify-start px-3 md:px-4 pt-3 md:pt-4 pb-5 md:pb-6 w-full">
+      <div className="flex flex-col items-center justify-start px-3 md:px-4 pt-3 md:pt-4 pb-5 md:pb-6 w-full animate-fade-in">
         {/* Avatar (Spline) */}
         <div className="flex justify-center items-center">
           <SplineAvatar scale={1.5} offsetX={0.1} offsetY={0.14} />
         </div>
 
-        {/* Name / handle / theme */}
+        {/* Name */}
         <div className="mt-3 md:mt-4 flex flex-col items-center w-full max-w-xs">
-          <div className="flex items-center gap-3 md:gap-4">
-            <Link href="/">
-              <h1 className="font-bold text-xl sm:text-[22px] md:text-2xl">
-                Yubraj Khatri
-              </h1>
-            </Link>
-            <ThemeChanger />
-          </div>
           <Link href="/">
-            <p className="opacity-60 text-xs sm:text-sm">Yubraj977</p>
+            <h1 className="font-bold text-xl sm:text-[22px] md:text-2xl text-center">
+              Yubraj Khatri
+            </h1>
           </Link>
 
           {/* Bio */}
@@ -99,71 +91,61 @@ export default function LeftPannel() {
           <div className="mt-3 grid grid-cols-1 sm:grid-cols-2 gap-2 w-full text-[14px] sm:text-[15px]">
             <a
               href="mailto:yubraj@example.com"
-              className="flex items-center gap-2 px-3 py-2 sm:px-3.5 sm:py-2.5 rounded-md border border-neutral-300 dark:border-neutral-700 hover:bg-black/5 dark:hover:bg-white/5 transition w-full"
+              className="flex items-center justify-center gap-2 px-3 py-2.5 sm:px-3.5 sm:py-3 rounded-lg border-2 border-neutral-300 dark:border-neutral-700 hover:border-green-500 hover:bg-green-50 dark:hover:bg-green-950/20 transition-all w-full group"
             >
-              <FiMail className="opacity-80 text-[16px] sm:text-[17px]" />
-              <span>Email</span>
+              <FiMail className="opacity-80 text-[16px] sm:text-[17px] group-hover:scale-110 transition-transform" />
+              <span className="font-medium">Email</span>
             </a>
             <a
               href="https://github.com/Yubraj977"
               target="_blank"
               rel="noreferrer"
-              className="flex items-center gap-2 px-3 py-2 sm:px-3.5 sm:py-2.5 rounded-md border border-neutral-300 dark:border-neutral-700 hover:bg-black/5 dark:hover:bg-white/5 transition w-full"
+              className="flex items-center justify-center gap-2 px-3 py-2.5 sm:px-3.5 sm:py-3 rounded-lg border-2 border-neutral-300 dark:border-neutral-700 hover:border-green-500 hover:bg-green-50 dark:hover:bg-green-950/20 transition-all w-full group"
             >
-              <FiGithub className="opacity-80 text-[16px] sm:text-[17px]" />
-              <span>GitHub</span>
+              <FiGithub className="opacity-80 text-[16px] sm:text-[17px] group-hover:scale-110 transition-transform" />
+              <span className="font-medium">GitHub</span>
             </a>
             <a
               href="https://instagram.com/001mycreativesite"
               target="_blank"
               rel="noreferrer"
-              className="flex items-center gap-2 px-3 py-2 sm:px-3.5 sm:py-2.5 rounded-md border border-neutral-300 dark:border-neutral-700 hover:bg-black/5 dark:hover:bg-white/5 transition w-full"
+              className="flex items-center justify-center gap-2 px-3 py-2.5 sm:px-3.5 sm:py-3 rounded-lg border-2 border-neutral-300 dark:border-neutral-700 hover:border-green-500 hover:bg-green-50 dark:hover:bg-green-950/20 transition-all w-full group"
             >
-              <FiInstagram className="opacity-80 text-[16px] sm:text-[17px]" />
-              <span>Instagram</span>
+              <FiInstagram className="opacity-80 text-[16px] sm:text-[17px] group-hover:scale-110 transition-transform" />
+              <span className="font-medium">Instagram</span>
             </a>
             <a
               href="https://youtube.com/@yourchannel"
               target="_blank"
               rel="noreferrer"
-              className="flex items-center gap-2 px-3 py-2 sm:px-3.5 sm:py-2.5 rounded-md border border-neutral-300 dark:border-neutral-700 hover:bg-black/5 dark:hover:bg-white/5 transition w-full"
+              className="flex items-center justify-center gap-2 px-3 py-2.5 sm:px-3.5 sm:py-3 rounded-lg border-2 border-neutral-300 dark:border-neutral-700 hover:border-green-500 hover:bg-green-50 dark:hover:bg-green-950/20 transition-all w-full group"
             >
-              <FiYoutube className="opacity-80 text-[16px] sm:text-[17px]" />
-              <span>YouTube</span>
+              <FiYoutube className="opacity-80 text-[16px] sm:text-[17px] group-hover:scale-110 transition-transform" />
+              <span className="font-medium">YouTube</span>
             </a>
           </div>
 
           {/* Newsletter */}
           <div className="mt-3 w-full">
-            <div className="rounded-lg border border-neutral-300/60 dark:border-neutral-800 bg-black/[0.04] dark:bg-white/[0.04] px-3 py-2.5 sm:px-3.5 sm:py-3">
-              <div className="flex items-center justify-between w-full">
+            <div className="rounded-xl border border-neutral-300/70 dark:border-neutral-700 bg-gradient-to-br from-green-50/50 to-purple-50/50 dark:from-green-950/20 dark:to-purple-950/20 px-3 py-2 sm:px-3.5 sm:py-2.5 backdrop-blur-sm">
+              <div className="flex items-center justify-between w-full mb-1.5">
                 <div className="flex items-center gap-2 flex-shrink-0">
-                  <FiUsers className="opacity-80 text-[15px] sm:text-[16px]" />
-                  <span className="text-[14px] sm:text-[15px] font-medium">
+                  <FiUsers className="opacity-80 text-[16px] sm:text-[17px] text-green-600 dark:text-green-400" />
+                  <span className="text-[14px] sm:text-[15px] font-semibold">
                     Newsletter
-                  </span>
-                  <span className="text-[11px] px-2 py-0.5 rounded-full bg-black/10 dark:bg-white/10">
-                    8
                   </span>
                 </div>
                 <Link
                   href="/subscribe"
-                  className="flex items-center gap-1 rounded-md px-2.5 py-1.5 text-[12px] sm:text-[13px] font-semibold border border-neutral-300 dark:border-neutral-700 hover:bg-black/5 dark:hover:bg-white/5 transition-colors duration-200 flex-shrink-0"
+                  className="flex items-center gap-1.5 rounded-lg px-3 py-1.5 text-[12px] sm:text-[13px] font-semibold bg-green-600 text-white hover:bg-green-500 dark:bg-green-500 dark:hover:bg-green-400 transition-all duration-200 flex-shrink-0 shadow-sm hover:shadow-md"
                 >
                   <FiBell className="text-[13px] sm:text-[14px]" />
                   <span>Subscribe</span>
                 </Link>
               </div>
-              <div className="mt-2 flex items-center justify-between w-full text-[12px] sm:text-[13px] opacity-70">
-                <span className="flex-shrink-0">Twice a month. No spam.</span>
-                <Link
-                  href="/rss.xml"
-                  className="flex items-center gap-1 hover:opacity-100 transition-opacity duration-200 flex-shrink-0"
-                >
-                  <FiRss className="text-[13px] sm:text-[14px]" />
-                  <span>RSS</span>
-                </Link>
-              </div>
+              <p className="text-[12px] sm:text-[13px] opacity-75 leading-relaxed">
+                Get updates on new posts, projects, and tech insights. Twice a month, no spam.
+              </p>
             </div>
           </div>
 
@@ -171,53 +153,76 @@ export default function LeftPannel() {
 
           {/* Languages */}
           <div className="mt-2 w-full">
-            <h4 className="text-xs sm:text-sm font-semibold opacity-80">
+            <h4 className="text-sm font-semibold opacity-90 mb-3 flex items-center gap-2">
               🗣️ Languages
             </h4>
-            <div className="mt-2 flex gap-2 text-[11px] sm:text-xs whitespace-nowrap overflow-x-auto no-scrollbar pr-1">
-              <span className="px-2 py-0.5 rounded-md border border-neutral-300 dark:border-neutral-700">
-                🇬🇧 English · B2
-              </span>
-              <span className="px-2 py-0.5 rounded-md border border-neutral-300 dark:border-neutral-700">
-                🇮🇳 Hindi · C1
-              </span>
-              <span className="px-2 py-0.5 rounded-md border border-neutral-300 dark:border-neutral-700">
-                🇳🇵 Nepali · Native
-              </span>
+            <div className="grid grid-cols-3 gap-2">
+              <div className="flex flex-col items-center gap-1.5 px-2 py-3 rounded-lg border border-neutral-300 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-900/50 hover:border-neutral-400 dark:hover:border-neutral-600 transition-all hover:scale-105">
+                <span className="text-3xl">🇬🇧</span>
+                <span className="text-[10px] sm:text-xs font-medium">English</span>
+                <span className="text-[9px] opacity-60">B2</span>
+              </div>
+              <div className="flex flex-col items-center gap-1.5 px-2 py-3 rounded-lg border border-neutral-300 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-900/50 hover:border-neutral-400 dark:hover:border-neutral-600 transition-all hover:scale-105">
+                <span className="text-3xl">🇮🇳</span>
+                <span className="text-[10px] sm:text-xs font-medium">Hindi</span>
+                <span className="text-[9px] opacity-60">C1</span>
+              </div>
+              <div className="flex flex-col items-center gap-1.5 px-2 py-3 rounded-lg border border-neutral-300 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-900/50 hover:border-neutral-400 dark:hover:border-neutral-600 transition-all hover:scale-105">
+                <span className="text-3xl">🇳🇵</span>
+                <span className="text-[10px] sm:text-xs font-medium">Nepali</span>
+                <span className="text-[9px] opacity-60">Native</span>
+              </div>
             </div>
           </div>
 
           {/* Operating Systems */}
           <div className="mt-3 w-full">
-            <h3 className="text-xs sm:text-sm font-bold mb-2 text-center">
-              Operating Systems
+            <h3 className="text-sm font-semibold opacity-90 mb-3 flex items-center gap-2">
+              💻 Operating Systems
             </h3>
-            <div className="w-full bg-white/60 dark:bg-white/5 border dark:border-white/10 backdrop-blur-sm shadow-md dark:shadow-xl rounded-xl px-3 py-2.5 sm:px-4 sm:py-3 flex justify-around items-center text-lg sm:text-2xl text-gray-700 dark:text-gray-300">
-              <FaApple className="hover:scale-110 transition-transform" />
-              <FaWindows className="hover:scale-110 transition-transform" />
-              <FaLinux className="hover:scale-110 transition-transform" />
+            <div className="grid grid-cols-3 gap-2">
+              <div
+                className="flex flex-col items-center gap-2 px-3 py-4 rounded-lg border border-neutral-300 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-900/50 hover:border-green-400 dark:hover:border-green-600 hover:bg-green-50 dark:hover:bg-green-950/30 transition-all cursor-pointer hover:scale-105 group"
+                title="macOS - Primary"
+              >
+                <FaApple className="text-2xl text-gray-700 dark:text-gray-300 group-hover:text-green-500 dark:group-hover:text-green-400 transition-colors" />
+                <span className="text-[10px] sm:text-xs font-medium text-center">macOS</span>
+              </div>
+              <div
+                className="flex flex-col items-center gap-2 px-3 py-4 rounded-lg border border-neutral-300 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-900/50 hover:border-green-400 dark:hover:border-green-600 hover:bg-green-50 dark:hover:bg-green-950/30 transition-all cursor-pointer hover:scale-105 group"
+                title="Windows - Familiar"
+              >
+                <FaWindows className="text-2xl text-gray-700 dark:text-gray-300 group-hover:text-green-500 dark:group-hover:text-green-400 transition-colors" />
+                <span className="text-[10px] sm:text-xs font-medium text-center">Windows</span>
+              </div>
+              <div
+                className="flex flex-col items-center gap-2 px-3 py-4 rounded-lg border border-neutral-300 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-900/50 hover:border-green-400 dark:hover:border-green-600 hover:bg-green-50 dark:hover:bg-green-950/30 transition-all cursor-pointer hover:scale-105 group"
+                title="Linux - Experience"
+              >
+                <FaLinux className="text-2xl text-gray-700 dark:text-gray-300 group-hover:text-green-500 dark:group-hover:text-green-400 transition-colors" />
+                <span className="text-[10px] sm:text-xs font-medium text-center">Linux</span>
+              </div>
             </div>
           </div>
 
           {/* Actions */}
-          {/* Actions */}
-          <div className="mt-3 grid grid-cols-2 gap-2 w-full text-sm sm:text-[15px]">
+          <div className="mt-4 grid grid-cols-2 gap-3 w-full text-sm sm:text-[15px]">
             <Link
               href="/gallery"
-              className="w-full bg-gray-800 hover:bg-gray-700 transition py-2 px-3 sm:py-2.5 sm:px-3.5 rounded-xl text-white font-semibold shadow-inner text-center"
+              className="w-full bg-gradient-to-r from-green-600 to-green-500 hover:from-green-500 hover:to-green-400 transition-all py-3 px-3 sm:py-3.5 sm:px-4 rounded-xl text-white font-bold shadow-lg hover:shadow-xl text-center transform hover:scale-105"
             >
-              Watch My Gallery
+              🎨 Gallery
             </Link>
 
             {/* CV with LinkPreview hover */}
             <LinkPreview
-              url="/api/download-cv" // keeps your download endpoint
+              url="/api/download-cv"
               imageSrc="/cv.png"
               isStatic
-              className="w-full bg-white/10 hover:bg-white/20 border border-white/20 transition py-2 px-3 sm:py-2.5 sm:px-3.5 rounded-xl font-semibold text-center flex items-center justify-center gap-2"
+              className="w-full bg-neutral-800 dark:bg-neutral-200 hover:bg-neutral-700 dark:hover:bg-neutral-300 text-white dark:text-black transition-all py-3 px-3 sm:py-3.5 sm:px-4 rounded-xl font-bold shadow-lg hover:shadow-xl text-center flex items-center justify-center gap-2 transform hover:scale-105"
             >
               <FiDownload className="text-[16px] sm:text-[17px]" />
-              <span>CV</span>
+              <span>Download CV</span>
             </LinkPreview>
           </div>
         </div>

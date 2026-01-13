@@ -82,7 +82,7 @@ export default function StackPage() {
             <span className="text-sm">Beginner</span>
           </div>
           <div className="flex items-center gap-2">
-            <div className="w-3 h-3 rounded-full bg-blue-500"></div>
+            <div className="w-3 h-3 rounded-full bg-green-500"></div>
             <span className="text-sm">Learning</span>
           </div>
         </div>
@@ -105,7 +105,7 @@ export default function StackPage() {
                 <motion.div
                   key={name}
                   whileHover={{ scale: 1.05, y: -5 }}
-                  className="group relative bg-white dark:bg-[#1c1c1c] border dark:border-white/10 rounded-xl p-5 shadow-md dark:shadow-lg flex items-center justify-center flex-col gap-3 transition-all duration-300"
+                  className="group relative bg-card border border-border rounded-xl p-5 shadow-md dark:shadow-lg flex items-center justify-center flex-col gap-3 transition-all duration-300"
                 >
                   <div className="text-4xl group-hover:scale-125 transition-transform duration-300">
                     {logo}
@@ -123,11 +123,11 @@ export default function StackPage() {
                       level === 'Advanced' ? 'bg-green-500' :
                       level === 'Intermediate' ? 'bg-yellow-500' :
                       level === 'Beginner' ? 'bg-orange-500' :
-                      'bg-blue-500'
+                      'bg-green-500'
                     }`} />
                   </div>
 
-                  <div className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-20 transition-all duration-300 bg-blue-400 dark:bg-blue-600 blur-xl z-[-1]" />
+                  <div className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-20 transition-all duration-300 bg-green-400 dark:bg-green-600 blur-xl z-[-1]" />
                 </motion.div>
               ))}
             </div>

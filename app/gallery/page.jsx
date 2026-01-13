@@ -48,7 +48,7 @@ export default function GalleryPage() {
             whileHover={{ scale: 1.05, rotate: -1 }}
             whileTap={{ scale: 0.98 }}
             transition={{ type: 'spring', stiffness: 300 }}
-            className="overflow-hidden rounded-2xl shadow-lg dark:shadow-gray-800 border border-gray-200 dark:border-gray-700 bg-white dark:bg-[#1c1c1c]"
+            className="overflow-hidden rounded-2xl shadow-lg dark:shadow-gray-800 border border-border bg-card"
           >
             <img
               src={image.regular}

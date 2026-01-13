@@ -53,13 +53,13 @@ const testimonials = [
 
 export default function TestimonialsPage() {
   return (
-    <div className="min-h-screen bg-white text-neutral-900 dark:bg-neutral-950 dark:text-neutral-100 px-6 py-10">
+    <div className="min-h-screen bg-background text-foreground px-6 py-10">
       <div className="mx-auto w-full max-w-6xl">
         {/* Header */}
         <header className="mb-12 text-center">
           <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-4">
             What People Say
-            <span className="block h-[3px] w-32 mx-auto mt-4 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full" />
+            <span className="block h-[3px] w-32 mx-auto mt-4 bg-gradient-to-r from-green-500 to-purple-500 rounded-full" />
           </h1>
           <p className="text-lg text-neutral-600 dark:text-neutral-400 max-w-2xl mx-auto">
             Feedback from clients, colleagues, and collaborators I&apos;ve had the pleasure of working with
@@ -72,9 +72,9 @@ export default function TestimonialsPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-center bg-white/80 dark:bg-white/[0.04] backdrop-blur-sm rounded-2xl border border-neutral-200/70 dark:border-neutral-800 p-6"
+            className="text-center bg-card/80 backdrop-blur-sm rounded-2xl border border-border p-6"
           >
-            <div className="text-3xl font-bold text-blue-600 mb-2">15+</div>
+            <div className="text-3xl font-bold text-green-600 mb-2">15+</div>
             <div className="text-sm text-neutral-600 dark:text-neutral-400">Projects Completed</div>
           </motion.div>
           
@@ -82,7 +82,7 @@ export default function TestimonialsPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-center bg-white/80 dark:bg-white/[0.04] backdrop-blur-sm rounded-2xl border border-neutral-200/70 dark:border-neutral-800 p-6"
+            className="text-center bg-card/80 backdrop-blur-sm rounded-2xl border border-border p-6"
           >
             <div className="text-3xl font-bold text-green-600 mb-2">100%</div>
             <div className="text-sm text-neutral-600 dark:text-neutral-400">Client Satisfaction</div>
@@ -92,7 +92,7 @@ export default function TestimonialsPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-center bg-white/80 dark:bg-white/[0.04] backdrop-blur-sm rounded-2xl border border-neutral-200/70 dark:border-neutral-800 p-6"
+            className="text-center bg-card/80 backdrop-blur-sm rounded-2xl border border-border p-6"
           >
             <div className="text-3xl font-bold text-purple-600 mb-2">5.0</div>
             <div className="text-sm text-neutral-600 dark:text-neutral-400">Average Rating</div>
@@ -107,7 +107,7 @@ export default function TestimonialsPage() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="bg-white/80 dark:bg-white/[0.04] backdrop-blur-sm rounded-2xl border border-neutral-200/70 dark:border-neutral-800 p-8 shadow-sm hover:shadow-lg transition-shadow"
+              className="bg-card/80 backdrop-blur-sm rounded-2xl border border-border p-8 shadow-sm hover:shadow-lg transition-shadow"
             >
               {/* Rating */}
               <div className="flex items-center mb-4">
@@ -122,14 +122,14 @@ export default function TestimonialsPage() {
               </blockquote>
 
               {/* Project */}
-              <div className="text-sm text-blue-600 dark:text-blue-400 font-medium mb-4">
+              <div className="text-sm text-green-600 dark:text-green-400 font-medium mb-4">
                 Project: {testimonial.project}
               </div>
 
               {/* Author */}
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-3">
-                  <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-500 rounded-full flex items-center justify-center text-white font-bold">
+                  <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-purple-500 rounded-full flex items-center justify-center text-white font-bold">
                     {testimonial.name.split(' ').map(n => n[0]).join('')}
                   </div>
                   <div>
@@ -146,7 +146,7 @@ export default function TestimonialsPage() {
                 <div className="flex gap-2">
                   {testimonial.linkedin && (
                     <a href={testimonial.linkedin} target="_blank" rel="noopener noreferrer"
-                       className="text-neutral-400 hover:text-blue-600 transition">
+                       className="text-neutral-400 hover:text-green-600 transition">
                       <FiLinkedin className="text-sm" />
                     </a>
                   )}
@@ -173,7 +173,7 @@ export default function TestimonialsPage() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.5 }}
-          className="text-center bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20 rounded-2xl border border-neutral-200/70 dark:border-neutral-800 p-8"
+          className="text-center bg-gradient-to-r from-green-50 to-purple-50 dark:from-green-900/20 dark:to-purple-900/20 rounded-2xl border border-neutral-200/70 dark:border-neutral-800 p-8"
         >
           <h2 className="text-2xl font-bold mb-4">Ready to Work Together?</h2>
           <p className="text-neutral-600 dark:text-neutral-400 mb-6 max-w-2xl mx-auto">
@@ -183,7 +183,7 @@ export default function TestimonialsPage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
               href="/contact" 
-              className="inline-flex items-center justify-center bg-blue-600 hover:bg-blue-500 text-white px-6 py-3 rounded-lg font-semibold transition"
+              className="inline-flex items-center justify-center bg-green-600 hover:bg-green-500 text-white px-6 py-3 rounded-lg font-semibold transition"
             >
               Start a Project
             </a>

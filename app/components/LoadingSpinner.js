@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 
-export function LoadingSpinner({ size = 'md', color = 'blue' }) {
+export function LoadingSpinner({ size = 'md', color = 'green' }) {
   const sizeClasses = {
     sm: 'w-4 h-4',
     md: 'w-8 h-8',
@@ -9,7 +9,7 @@ export function LoadingSpinner({ size = 'md', color = 'blue' }) {
   };
 
   const colorClasses = {
-    blue: 'border-blue-500',
+    green: 'border-green-500',
     green: 'border-green-500',
     purple: 'border-purple-500',
     gray: 'border-gray-500'
@@ -28,7 +28,7 @@ export function PageLoader() {
   return (
     <div className="min-h-screen flex items-center justify-center bg-white dark:bg-neutral-950">
       <div className="text-center">
-        <LoadingSpinner size="xl" color="blue" />
+        <LoadingSpinner size="xl" color="green" />
         <p className="mt-4 text-neutral-600 dark:text-neutral-400">Loading...</p>
       </div>
     </div>
@@ -38,7 +38,7 @@ export function PageLoader() {
 export function ComponentLoader() {
   return (
     <div className="flex items-center justify-center p-8">
-      <LoadingSpinner size="lg" color="blue" />
+      <LoadingSpinner size="lg" color="green" />
     </div>
   );
 }

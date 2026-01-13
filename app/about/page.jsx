@@ -1,30 +1,33 @@
 'use client';
 
 import React from 'react';
+import ScrollReveal from '../components/ScrollReveal';
 import { FiMapPin, FiBook, FiCode, FiHeart, FiCoffee, FiBookOpen } from 'react-icons/fi';
 
 export default function AboutPage() {
   return (
-    <div className="min-h-screen bg-white text-neutral-900 dark:bg-neutral-950 dark:text-neutral-100 px-6 py-10">
+    <div className="min-h-screen bg-background text-foreground px-6 py-10">
       <div className="mx-auto w-full max-w-4xl">
         {/* Header */}
-        <header className="mb-12 text-center">
-          <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-4">
-            About Me
-            <span className="block h-[3px] w-32 mx-auto mt-4 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full" />
-          </h1>
-          <p className="text-lg text-neutral-600 dark:text-neutral-400 max-w-2xl mx-auto">
-            Software Developer | Problem Solver | Learner
-          </p>
-        </header>
+        <ScrollReveal animation="fade-in">
+          <header className="mb-12 text-center">
+            <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-4">
+              About Me
+              <span className="block h-[3px] w-32 mx-auto mt-4 bg-gradient-to-r from-green-500 to-purple-500 rounded-full" />
+            </h1>
+            <p className="text-lg text-neutral-600 dark:text-neutral-400 max-w-2xl mx-auto">
+              Software Developer | Problem Solver | Learner
+            </p>
+          </header>
+        </ScrollReveal>
 
         {/* Main Content Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
           {/* Left Column - Main Story */}
           <div className="lg:col-span-2 space-y-6">
-            <div className="bg-white/80 dark:bg-white/[0.04] backdrop-blur-sm rounded-2xl border border-neutral-200/70 dark:border-neutral-800 p-8">
+            <div className="bg-card/80 backdrop-blur-sm rounded-2xl border border-border p-8">
               <h2 className="text-2xl font-bold mb-6 flex items-center gap-3">
-                <FiBookOpen className="text-blue-500" />
+                <FiBookOpen className="text-green-500" />
                 My Story
               </h2>
               
@@ -59,7 +62,7 @@ export default function AboutPage() {
           {/* Right Column - Quick Facts */}
           <div className="space-y-6">
             {/* Education */}
-            <div className="bg-white/80 dark:bg-white/[0.04] backdrop-blur-sm rounded-2xl border border-neutral-200/70 dark:border-neutral-800 p-6">
+            <div className="bg-card/80 backdrop-blur-sm rounded-2xl border border-border p-6">
               <h3 className="text-lg font-bold mb-4 flex items-center gap-2">
                 <FiBook className="text-green-500" />
                 Education
@@ -74,7 +77,7 @@ export default function AboutPage() {
             </div>
 
             {/* Location */}
-            <div className="bg-white/80 dark:bg-white/[0.04] backdrop-blur-sm rounded-2xl border border-neutral-200/70 dark:border-neutral-800 p-6">
+            <div className="bg-card/80 backdrop-blur-sm rounded-2xl border border-border p-6">
               <h3 className="text-lg font-bold mb-4 flex items-center gap-2">
                 <FiMapPin className="text-red-500" />
                 Location
@@ -88,14 +91,14 @@ export default function AboutPage() {
             </div>
 
             {/* Interests */}
-            <div className="bg-white/80 dark:bg-white/[0.04] backdrop-blur-sm rounded-2xl border border-neutral-200/70 dark:border-neutral-800 p-6">
+            <div className="bg-card/80 backdrop-blur-sm rounded-2xl border border-border p-6">
               <h3 className="text-lg font-bold mb-4 flex items-center gap-2">
                 <FiHeart className="text-pink-500" />
                 Interests
               </h3>
               <div className="space-y-2 text-sm">
                 <div className="flex items-center gap-2">
-                  <FiCode className="text-blue-500 text-xs" />
+                  <FiCode className="text-green-500 text-xs" />
                   <span>Full-Stack Development</span>
                 </div>
                 <div className="flex items-center gap-2">
@@ -112,12 +115,12 @@ export default function AboutPage() {
         </div>
 
         {/* Values & Philosophy */}
-        <div className="bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20 rounded-2xl border border-neutral-200/70 dark:border-neutral-800 p-8">
+        <div className="bg-gradient-to-r from-green-50 to-purple-50 dark:from-green-900/20 dark:to-purple-900/20 rounded-2xl border border-neutral-200/70 dark:border-neutral-800 p-8">
           <h2 className="text-2xl font-bold mb-6 text-center">My Development Philosophy</h2>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="text-center">
-              <div className="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-3">
+              <div className="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-3">
                 <FiCode className="text-white" />
               </div>
               <h3 className="font-semibold mb-2">Clean Code</h3>
@@ -155,7 +158,7 @@ export default function AboutPage() {
           </p>
           <a 
             href="/contact" 
-            className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white px-6 py-3 rounded-lg font-semibold transition"
+            className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-500 text-white px-6 py-3 rounded-lg font-semibold transition"
           >
             Let&apos;s Connect
           </a>

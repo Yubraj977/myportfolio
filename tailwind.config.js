@@ -11,6 +11,23 @@ module.exports = {
 		colors: {
 		  background: "var(--background)",
 		  foreground: "var(--foreground)",
+		  card: "var(--card)",
+		  border: "var(--border)",
+		  primary: {
+			DEFAULT: "var(--primary)",
+			light: "var(--primary-light)",
+			dark: "var(--primary-dark)",
+		  },
+		  accent: {
+			DEFAULT: "var(--accent)",
+			light: "var(--accent-light)",
+			dark: "var(--accent-dark)",
+		  },
+		},
+		fontFamily: {
+		  orbitron: ["var(--font-orbitron)", "sans-serif"],
+		  geist: ["var(--font-geist-sans)", "sans-serif"],
+		  mono: ["var(--font-geist-mono)", "monospace"],
 		},
 		borderRadius: {
 		  lg: "var(--radius)",
