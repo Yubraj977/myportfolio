@@ -1,24 +1,21 @@
 "use client"
 import Image from 'next/image';
 import React from 'react'
-import { useNavigate } from 'react-router-dom';
 
 
 function Card({name,genre,language,duration,thumbnail,date,rating,id,link}) {
-  
-  
-    function handleClick(){
-        navigate(`/movie/${id}`);
-    }
 
     return (
         <a href={`${link}`}>
-        <div className="main   lg:w-64 lg:h-[30rem] w-40 h-[19rem] hover:scale-100 bg-slate-400 dark:bg-opacity-10 bg-opacity-20 flex flex-col justify-between  relative"  onClick={handleClick} >
+        <div className="main   lg:w-64 lg:h-[30rem] w-40 h-[19rem] hover:scale-100 bg-slate-400 dark:bg-opacity-10 bg-opacity-20 flex flex-col justify-between  relative" >
 
-            <div className="image  w-full lg:h-5/6 h-4/6">
-                <img src={thumbnail} alt="" 
-                className='object-contain h-full w-full' 
-              
+            <div className="image  w-full lg:h-5/6 h-4/6 relative">
+                <Image
+                src={thumbnail}
+                alt={name || ""}
+                fill
+                className='object-contain'
+                unoptimized
                 />
             </div>
 

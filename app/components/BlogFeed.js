@@ -1,7 +1,8 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 import { FiClock, FiExternalLink, FiRss, FiRefreshCw } from 'react-icons/fi';
 import { LoadingSpinner } from './LoadingSpinner';
 
@@ -10,11 +11,7 @@ export default function BlogFeed({ showAll = false, maxPosts = 3 }) {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  useEffect(() => {
-    fetchBlogPosts();
-  }, []);
-
-  const fetchBlogPosts = async () => {
+  const fetchBlogPosts = useCallback(async () => {
     try {
       setLoading(true);
       setError(null);
@@ -38,7 +35,11 @@ export default function BlogFeed({ showAll = false, maxPosts = 3 }) {
     } finally {
       setLoading(false);
     }
-  };
+  }, [showAll, maxPosts]);
+
+  useEffect(() => {
+    fetchBlogPosts();
+  }, [fetchBlogPosts]);
 
   const formatDate = (dateString) => {
     try {
@@ -150,13 +151,13 @@ export default function BlogFeed({ showAll = false, maxPosts = 3 }) {
 
       {!showAll && posts.length >= maxPosts && (
         <div className="text-center pt-6">
-          <a
+          <Link
             href="/"
             className="inline-flex items-center gap-2 text-green-600 dark:text-green-400 hover:text-green-500 dark:hover:text-green-300 px-4 py-2 rounded-lg font-semibold transition"
           >
             View All Posts
             <FiExternalLink className="text-sm" />
-          </a>
+          </Link>
         </div>
       )}
     </div>

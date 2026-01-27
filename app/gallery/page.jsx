@@ -1,8 +1,9 @@
 
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useCallback } from 'react';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 export default function GalleryPage() {
   const [photos, setPhotos] = useState([]);
@@ -12,7 +13,7 @@ export default function GalleryPage() {
 
   const perPage = 12;
 
-  async function load(p = 1) {
+  const load = useCallback(async (p = 1) => {
     if (loading) return;
     setLoading(true);
     try {
@@ -26,10 +27,11 @@ export default function GalleryPage() {
     } finally {
       setLoading(false);
     }
-  }
+  }, [loading]);
 
   useEffect(() => {
     load(1);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
@@ -50,12 +52,15 @@ export default function GalleryPage() {
             transition={{ type: 'spring', stiffness: 300 }}
             className="overflow-hidden rounded-2xl shadow-lg dark:shadow-gray-800 border border-border bg-card"
           >
-            <img
-              src={image.regular}
-              alt={image.alt}
-              className="w-full h-64 object-cover object-center hover:brightness-110 transition-all duration-300"
-              loading="lazy"
-            />
+            <div className="relative w-full h-64">
+              <Image
+                src={image.regular}
+                alt={image.alt || "Gallery image"}
+                fill
+                className="object-cover object-center hover:brightness-110 transition-all duration-300"
+                unoptimized
+              />
+            </div>
             {(image.title || image.alt) && (
               <div className="p-4 text-center font-semibold text-gray-800 dark:text-gray-200">
                 {image.title || image.alt}

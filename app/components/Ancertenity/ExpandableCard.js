@@ -216,7 +216,7 @@ const cards = [
           Built as part of the <span className="font-bold text-green-500">Brockport SIG-AI initiative</span>, this platform
           explores how <span className="font-bold text-green-500">artificial intelligence can enhance learning experiences</span> and
           support educators in creating more effective teaching strategies. The project leverages
-          <span className="font-bold text-green-500"> FastAPI for backend development and OpenAI's API</span> to provide
+          <span className="font-bold text-green-500"> FastAPI for backend development and OpenAI&apos;s API</span> to provide
           intelligent educational tools. This research initiative aims to bridge the gap between AI technology and
           practical classroom applications, making advanced AI accessible for educational purposes. The platform demonstrates
           my expertise in <span className="font-bold text-green-500">AI integration, educational technology, and research-driven development</span>,
@@ -236,7 +236,7 @@ const cards = [
         (<p>
           Taste for Nepal is a modern website I developed using <span className="fong-bold text-green-500"> Next.js, React, and Tailwind CSS</span> to represent
           a Nepalese restaurant located near Niagara. This project showcases a seamless blend of traditional Nepali
-          culture with contemporary web design, creating an immersive experience for visitors. The site highlights the restaurant's unique
+          culture with contemporary web design, creating an immersive experience for visitors. The site highlights the restaurant&apos;s unique
            offerings, including authentic Nepalese cuisine and a welcoming ambiance that reflects the spirit of Nepal. By leveraging Next.js
            for <span className="fong-bold text-green-500"> server-side rendering and optimized performance, React for dynamic components, and Tailwind CSS for a sleek, responsive design, </span>
            the website ensures a delightful and engaging browsing experience. This project demonstrates my ability to use advanced web development

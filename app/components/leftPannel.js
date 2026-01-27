@@ -206,14 +206,7 @@ export default function LeftPannel() {
           </div>
 
           {/* Actions */}
-          <div className="mt-4 grid grid-cols-2 gap-3 w-full text-sm sm:text-[15px]">
-            <Link
-              href="/gallery"
-              className="w-full bg-gradient-to-r from-green-600 to-green-500 hover:from-green-500 hover:to-green-400 transition-all py-3 px-3 sm:py-3.5 sm:px-4 rounded-xl text-white font-bold shadow-lg hover:shadow-xl text-center transform hover:scale-105"
-            >
-              🎨 Gallery
-            </Link>
-
+          <div className="mt-4 w-full text-sm sm:text-[15px]">
             {/* CV with LinkPreview hover */}
             <LinkPreview
               url="/api/download-cv"
